@@ -1,0 +1,155 @@
+\begin{filecontents}{preliminary.sty}
+\ProvidesPackage{preliminary}
+%\DeclareOption{draft}{%
+  \AtBeginDocument{%
+    \renewcommand\maketitlehookc{%
+      \begin{center}\textit{Very preliminary---please do not cite}\end{center}}}
+      %}
+\ProcessOptions
+\RequirePackage{titling}
+\endinput
+\end{filecontents}
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage[centertags,reqno]{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics,subfigure}
+\usepackage[dvips]{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{appendix}
+\usepackage{natbib}
+\usepackage{verbatim,color}
+\usepackage{pdflscape}
+\usepackage[showframe=false]{geometry}
+\usepackage{changepage}
+\usepackage{xcolor}
+\usepackage{eurosym}
+\usepackage{textcomp}
+\usepackage[open,openlevel=1]{bookmark}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{hyphenat}
+\newcommand{\mybox}[2]{{\color{#1}\fbox{\normalcolor#2}}}
+\doublespacing
+
+% Exception to hyphenation
+\hyphenation{par-ti-ci-pants}
+\hyphenation{par-ti-ci-pant}
+\hyphenation{Hy-po-the-sis}
+\hyphenation{ex-pe-ri-ment}
+\hyphenation{ex-pe-ri-ments}
+
+% Allows bigger tables to be scaled down
+\usepackage{adjustbox}
+
+%From my paper with Raymond
+\usepackage{tabularx,calc}
+\usepackage{dcolumn}                    % Aligns tables on the decimal point
+\newcolumntype{d}[1]{D{.}{.}{#1}}       %       Aligns on dot
+\newcolumntype{.}{D{.}{.}{3.5}}         %       Somehow it works better
+\newcolumntype{C}{@{\extracolsep{.6cm}}c@{\extracolsep{0pt}}}
+\usepackage{threeparttable}
+\usepackage{siunitx,booktabs}
+\sisetup{
+    detect-all,
+    round-integer-to-decimal = true,
+    group-digits             = true,
+    group-minimum-digits     = 4,
+    group-separator          = {\,},
+    table-align-text-pre     = false,
+    table-align-text-post    = false,
+    input-signs              = + -,
+    input-symbols            = {*} {**} {***},
+    input-open-uncertainty   = ,
+    input-close-uncertainty  = ,
+    retain-explicit-plus
+}
+
+% Commands to name appendices Appendix A, Appendix B, etc.
+\makeatletter
+%% The "\@seccntformat" command is an auxiliary command
+%% (see pp. 26f. of 'The LaTeX Companion,' 2nd. ed.)
+\def\@seccntformat#1{\@ifundefined{#1@cntformat}%
+   {\csname the#1\endcsname\quad}  % default
+   {\csname #1@cntformat\endcsname}% enable individual control
+}
+\let\oldappendix\appendix %% save current definition of \appendix
+\renewcommand\appendix{%
+    \oldappendix
+    \newcommand{\section@cntformat}{\appendixname~\thesection\quad}
+}
+
+%Adds text specifying it is a preliminary version
+\usepackage{preliminary}
+
+\title{Group identity and betrayal: decomposing trust}
+\author{Maria Polipciuc\thanks{Maastricht University. Email: \url{m.polipciuc@maastrichtuniversity.nl}. First and foremost, I thank Martin Strobel for his generous and kind supervision. I thank seminar audiences at Maastricht University, RWTH Aachen University, conference participants at the 2018 ESA World Meeting in Berlin and at the 2018 M-BEES in Maastricht. I also thank Kelly Geyskens for the opportunity to run the experiments. Joey Mak was an extremely helpful contact at the Administration Office. Miruna Cotet, Alexandra Franzen, Ferdinand Pieroth and Lars Wittrock provided excellent research assistance with running the experiments. Discussions with Nickolas Gagnon and Henrik Zaunbrecher helped shape the ideas in this paper.}}
+\date{\today	\vspace{1cm}}
+\titlepage
+
+
+\begin{document}
+\begin{titlepage}
+\clearpage\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+% Does discrimination in betrayal aversion (partly) explain discrimination in trusting in- versus outgroup members?
+In a series of two lab experiments, I study the willingness to accept a risky payoff from trusting in- versus outgroup members rather than a sure payoff, and its determinants, with a focus on betrayal aversion.
+Participants are students who are assigned quasi-randomly to groups outside the lab.
+The first experiment collects data soon after the groups have been formed, at the beginning of an academic year.
+The second experiment is run seven months later, toward the end of the academic year.
+
+
+In the beginning of the academic year, there is positive betrayal aversion, which does not differ toward in- versus outgroup members.
+The willingness to accept the risky payoff from trusting is also the same in in- and outgroup matches at this time.
+Toward the end of the year, I find no betrayal aversion, to either group.
+At this time, I notice that participants differ in their willingness to accept the risky payoff from trusting, depending on their choice in a hypothetical allocation task.
+Those who select an ingroup recipient in the allocation task (60\% of subjects) are more willing to accept a risky payoff from trusting an ingroup than an outgroup member.
+Those who select a random participant in the experiment as recipient in the allocation task (40\% of subjects) are equally willing to accept the risky payoff from trusting an in- or an outgroup opponent.
+Neither type of player shows betrayal aversion, neither to in-, nor to outgroup opponents in the second experiment.
+
+In this setting intention-based social preferences (such as betrayal aversion) do not contribute to the in-/outgroup gap in trust in the second experiment, after controlling for subjective beliefs, risk attitudes, ambiguity attitudes and outcome-based social preferences.
+These results indicate that discrimination in trust is due to a combination of statistical discrimination and taste-based discrimination resulting from outcome-based social preferences. 
+
+\end{abstract}
+\end{titlepage}
+
+
+\section{Introduction}\label{sec:intro}
+
+
+    Trial Title
+    Country (At least one)
+    Status
+    Keyword (At least one)
+    Abstract
+    Trial Start Date
+    Intervention Start Date
+    Intervention End Date
+    Trial End Date
+    Outcomes (End Points)
+    Experimental Design (Public)
+    Was the treatment clustered?
+    Planned Number of Clusters
+    Planned Number of Observations
+    Was IRB approval obtained (only for "In Development" and "On-going" trials)? If so, also
+        IRB Name
+        IRB Approval Date
+        IRB Approval Number
+
+
+
+
+
+
+\clearpage
+\pagebreak
+\bibliographystyle{apalike}
+\bibliography{Communities}
+
+
+
+\end{document}
