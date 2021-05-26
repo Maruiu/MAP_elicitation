@@ -103,7 +103,7 @@
 
 \normalsize \noindent \textcolor{NavyBlue}{\textbf{Intervention(s)}}
 
-We compare minimum acceptable probabilities (MAPs) for which a participant considers a binary lottery equally desirable to a sure payoff across treatments within individual.
+We compare minimum acceptable probabilities (MAPs) for which a participant prefers a binary lottery to a sure payoff across treatments within individual.
 Individuals have to decide in randomized order in three scenarios (treatments).
 The treatments keep the sure payoff and the payoffs of the lottery fixed, but vary the distribution of the winning probability of the lottery.
 
@@ -129,7 +129,7 @@ MAPs
 
 \noindent \textcolor{NavyBlue}{\textbf{Primary Outcomes (explanation)}}
 
-The MAPs are elicited as indifference values. 
+The MAPs are elicited as thresholds for preferring a lottery to a sure payoff. 
 
 
 
@@ -138,13 +138,20 @@ The MAPs are elicited as indifference values.
 \normalsize \noindent \textcolor{NavyBlue}{\textbf{Experimental Design}}
 
 We elicit MAPs in an online experiment in a lottery similar to the \textit{Decision Problem} in \cite{Bohnet2004}.
-The aim is to test an assumption required for the MAP elicitation procedure to be incentive-compatible.
-Specifically, we test whether there is evidence that participants' declared MAPs are independent of the underlying distribution from which the probability of success of the gamble is drawn.
-We do this by exogenously manipulating this distribution, and comparing the resulting MAPs across treatments.
+In this paper, \cite{Bohnet2004} find that participants require a premium for being willing to trust someone compared to taking an equally risky bet with the same payoff externalities for an uninvolved person.
+They attribute this premium to betrayal aversion---an anticipatory disutility from exposing oneself to the risk of being betrayed.
+
+As \cite{Li2020a} note, this attribution rests on the assumption that participants are rational expected utility maximizers.
+Should participants not be rational expected utility maximizers, there are several possible confounding explanations for the premium found by \cite{Bohnet2004} and subsequent studies, such as ``ambiguity attitudes, complexity, different beliefs, and dynamic optimization'' \citep[p.~275]{Li2020a}.
+
+In this study, we test experimentally what the contribution of one such confounding explanation is to this premium.
+Specifically, we test whether participants' declared MAPs change as a result of the underlying distribution from which the probability of success of the gamble is drawn.
+We exogenously manipulate participants' beliefs about this distribution by varying the different objective distributions from which the probability of success $p^*$ is drawn.
+We then compare the resulting MAPs across treatments.
 
 \noindent \textcolor{NavyBlue}{\textbf{Experimental Design Details}}
 
-Not available
+See the pre-analyis plan
 
 \noindent \textcolor{NavyBlue}{\textbf{Randomization Method}}
 
@@ -169,41 +176,23 @@ No
         IRB Approval Date
         
         IRB Approval Number
+        
+\textcolor{red}{No, but the experiment has been approved in a BEELab proposal meeting at Maastricht University.}
 
 
 
 
 
 \section{Introduction}
-The Minimum Acceptable Probability (MAP) is an elicitation procedure for an indifference value (expressed as the probability or as the number of favorable outcomes) between a sure payoff and trusting someone.
-In other words, it is the value which makes an individual indifferent between engaging and not engaging in a trusting interaction.
+The Minimum Acceptable Probability (MAP) is a threshold value elicited through a procedure similar to a Becker-DeGroot-Marschak mechanism (expressed as the probability or as the number of favorable outcomes) for preferring to trust someone over accepting a sure payoff.
 
 The concept was introduced by \cite{Bohnet2004} and it has been used—with slight variations—to elicit a determinant of trust, betrayal aversion, in a difference-in-difference design.
-This procedure is incentive compatible if ``a principal adheres to the Substitution Axiom of von Neumann-Morgenstern utility [...] A MAP is a cutoff value relating to preferences, and the estimated value of $p^*$ [\textit{NR: the winning probability}] should not affect it.'' \citep[p. 298]{Bohnet2008}.
-While empirical violations of this axiom---which implies expected utility---have been documented \cite[see footnote 5 on p. 275 in][for a list of studies finding empirical violations]{Li2020a}, to our knowledge it is not yet established whether this violation is empirically relevant in the context of the MAP elicitation procedure.%\footnote{
-%\textcolor{red}{Another important point is the following observation made in footnote 4 on p. 815 in \cite{Bohnet2010}: ``Note that a principal cannot affect the probability he or she receives in the lottery, because it in no way relates to the answer that he or she provides.''}
-%\textcolor{red}{This is true by design; however, we believe that there is another dimension of risk exposure than the probability received in the lottery that the participant can control through their MAP.}
-%\textcolor{red}{The participant can be viewed as facing a compound risk, which consists of (i) the probability received in the lottery and (ii) the probability that they receive a lottery with a certain winning probability or higher at a certain MAP, which is determined by its cumulative density (or mass, if the distribution is discrete) function.}
-%\textcolor{red}{From this, the underlying distribution of the winning probability in the lottery may influence the MAP due to its impact on (ii).}
-%\textcolor{red}{An implication is that the difference between treatments might be due to different underlying distributions of the winning probability across treatments, not to the different nature of the lotteries (risky/social/strategic).}
-%\textcolor{red}{In other words, the difference might be due to risk aversion---this could potentially explain why several studies which keep subjective probabilities constant across treatments and do not find evidence of betrayal aversion \citep{Fetchenhauer2012,Polipciuc2020}.}
-%}
-
+As \cite{Li2020a} show, if participants are not rational expected utility maximizers, there are several other confounding explanations for the premium.
 
 This paper investigates whether the MAP is influenced by a participant’s belief about the distribution from which the chance of a favorable outcome is drawn. 
-We remove the social and strategic aspects of a trust decision, and study the MAP for accepting a risky lottery.
-%The experiment consists of three treatments, which participants experience sequentially in randomized order.
+We remove the social and strategic aspects of a trusting decision, and study the MAP for accepting a risky lottery.
 The treatments vary the distribution from which the chance of the favorable outcome is drawn, thus manipulating participants’ expectations about the lottery’s winning chances.
-%For each decision, the world is described to participants before the MAP elicitation, and it is characterized by a distribution over winning probabilities.
 
-%The winning probability is drawn from the respective distribution prior to decision-making, but participants are only informed about it after having made their decision.
-%Should participants change their MAP depending on the treatment they're in, this is evidence that the MAP elicitation procedure (which uses the strategy method) is not incentive compatible unless one accounts for subjective expectations.\footnote{
-%When uncertainty is resolved—even if this is irrelevant for strategic or informational purposes—has also been shown to matter for decisions \citep[see footnote 11 on p. 29 in][]{Johnson2019}.
-%The experiment jointly tests whether different underlying distributions of winning probabilities matter, in a context where uncertainty is resolved after making the decision (the actual state of the world is revealed to participants after they state their MAP).
-
-%In BZ, the state of the world is determined before participants make a decision (but they are not told from which distribution of states it has been drawn).
-%Similarly to our experiment, they are only informed about the state of the world after having made their decision.
-%}
 
 Below we present the sample selection procedure, the experimental design, and the empirical strategy.
 
@@ -212,26 +201,28 @@ Below we present the sample selection procedure, the experimental design, and th
 \section{Research Strategy}
 This project will collect experimental data on an online platform dedicated to academic research (Prolific) in May 2021. Participants will be exposed to three treatments sequentially, in randomized order.
 In each of the treatments, participants have to state the MAP (minimum acceptable probability) for which they prefer a lottery over a sure payment.
-This is a version of \citeauthor{Bohnet2004}'s (\citeyear{Bohnet2004}) \textit{Decision Problem} (p. 469).
-The treatments differ in the underlying distribution from which the lottery is drawn.
-Given the complexity of the task, we will recruit participants with completed higher education \textcolor{red}{(also students?)}, to increase the chances that task comprehension is not an issue.
+%This is a version of \citeauthor{Bohnet2004}'s (\citeyear{Bohnet2004}) \textit{Decision Problem} (p. 469).
+%The treatments differ in the underlying distribution from which the lottery is drawn.
+%Given the complexity of the task, we will recruit participants with completed higher education, to increase the chances that task comprehension is not an issue.
 
 The pre-analysis plan will be registered at the AEA RCT registry before the start of the data collection.
+
 
 \subsection{Recruitment}
 Participants are registered users on the online platform Prolific.
 This platform is tailored for academic research, and gathers demographics about registered users.
-We will send an invitation to the experiment only to participants who have completed higher education \textcolor{red}{(maybe also to students?)}, for the reasons mentioned above. 
+We will send an invitation to the experiment only to participants who have completed higher education to increase the chances that task comprehension is not an issue.
+Our sample consists of residents of the United Kingdom.
 
 
 
 \section{Design}
 The study consists of three parts.
-The first part describes the task and ask comprehension questions (unincentivized).
+The first part describes the task and asks comprehension questions.
 This part pays a fixed payoff.
-Only those who answer the comprehension questions correctly are directed to the main part, which is incentivized.
-After this, those who complete the main part go through a survey.
-Uncertainty is resolved at the very end, when participants are informed about their payoff for the second (main) part.
+Only those who answer the comprehension questions correctly are directed to the second part, which is incentivized.
+After this, those who complete the second part go through a survey (the third part), which is unincentivized.
+Uncertainty is resolved at the very end, when participants are informed about their payoff for the second part.
 
 As mentioned above, participants in the experiment are asked to state their MAP in a \textit{Decision Problem}: what is their MAP for taking a gamble rather than accepting a sure payoff?
 The experiment uses a within-subject design.
@@ -246,23 +237,59 @@ See the document `Explanation.pdf'.
 %TBD
 
 \subsection{Main task in Part 2}
-After having answered the comprehension questions in Part 1 correctly, participants see a picture like the one below with the following text:
+In each treatment, the subjects are faced with a different distribution of the possible states of the world.
+Each state of the world is represented by a wheel of fortune with 15 sectors.
+Sectors are either dark blue (worth the high payoff of \pounds4) or light blue (worth the low payoff of \pounds1).
+Each of the three treatments consists of 32 different wheels, which can be ordered by the overall expected value over all wheels in the treatment.
+We call the three treatments: the Good (the treatment with the highest expected value over all 32 wheels, which is left-skewed), the Bad (the treatment with the lowest expected value over all 32 wheels, which is right-skewed), and the Uniform (the expected value is in-between the ones in the other treatments, and the distribution of risk is uniform).
+The Bad and the Uniform distribution were chosen to reflect potential distributions imagined by participants in \cite{Bohnet2004} and \cite{Bohnet2008} in the Trust Game and in the Decision Problem, respectively.
+Specifically, the Bad distribution has an expected probability of a blue sector over all 32 wheels of 0.2895, close to $p^*$ in the Trust Game.
+The Uniform distribution is plausibly what participants expected to face in the Decision Problem.
 
-\textit{[Insert images]}
+Payoffs are determined by a two-stage lottery with objective probabilities.
+In Stage 1, one of the 32 wheels is randomly drawn.
+In Stage 2, the number of blue sectors in the randomly selected wheel is compared with the participant's MAP.
+Should this number be equal to or exceed her MAP, the participant spins the virtual wheel for her payoff.
+Should the number be lower than her MAP, the wheel is not spun, and the participant receives the intermediate safe payoff of \pounds2.
+
+After having answered the comprehension questions in Part 1 correctly, participants see a picture like the one in Figures \ref{fig:thegood}, \ref{fig:thebad}, \ref{fig:theuniform}, with the following text:
+
+\begin{figure}[h!]
+  \centering
+ {\includegraphics[width=0.95\linewidth]{Left_15.png}}
+  \caption{Left-skewed distribution (`The Good')}
+  \label{fig:thegood}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+ {\includegraphics[width=0.95\linewidth]{Right_15.png}}
+  \caption{Right-skewed distribution (`The Bad')}
+  \label{fig:thebad}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+ {\includegraphics[width=0.95\linewidth]{Uniform_15.png}}
+  \caption{Uniform distribution (`The Uniform')}
+  \label{fig:theuniform}
+\end{figure}
 
 \textit{Consider the wheels above. Which wheels do you prefer to SPIN for your bonus?
 Please enter an integer between 0 and 15.}
 
-\textit{I prefer to SPIN wheels which have at least ... blue sectors.}
+\textit{I prefer to SPIN wheels which have at least ... dark blue sectors.}
 
-\textit{If the randomly selected wheel has fewer than ... blue sectors, I DON'T SPIN it.
-My bonus is \euro 2.}
+\textit{If the randomly selected wheel has fewer than ... dark blue sectors, I DON'T SPIN it.
+My bonus is \pounds2.}
 
-\textit{If the randomly selected wheel has ... or more blue sectors, I SPIN it.
+\textit{If the randomly selected wheel has ... or more dark blue sectors, I SPIN it.
 My bonus is}
 \begin{itemize}
-\item \textit{\euro 1 if the selected wheel lands on a pink sector, and}
-\item \textit{\euro 4 if it lands on a blue sector.}
+\item \textit{\pounds1 if the selected wheel lands on a light blue sector, and}
+\item \textit{\pounds4 if it lands on a dark blue sector.}
 \end{itemize}
 
 \subsection{Survey questions in Part 2}
@@ -277,71 +304,35 @@ Participants answer the following type of questions:
 \end{itemize}
 
 Additional information will be requested from Prolific, who can provide data on participants' age, gender, and investment behavior.
-\textcolor{red}{All participants have completed higher education or are currently enrolled in higher education.}
-Our sample consists of residents of the United Kingdom.
+
 
 
 
 \section{Empirical Strategy}
-The experiment is meant to study how much of betrayal aversion can be explained by different underlying distributions from which the winning probability is drawn.
-
-In each treatment, the subjects are faced with a different distribution of the possible states of the world.
-Each state of the world is represented by a wheel of fortune with 15 sectors.
-Sectors are either blue (worth the high payoff) or pink (worth the low payoff).
-Each of the three treatments consists of 32 different wheels, which can be ordered by the overall expected value over all wheels in the treatment.
-We call the three treatments: the Good (the treatment with the highest expected value over all 32 wheels, which is left-skewed), the Bad (the treatment with the lowest expected value over all 32 wheels, which is right-skewed), and the Uniform (the expected value is in-between the ones in the other treatments, and the distribution of risk is uniform).
-
-Payoffs are determined by a two-stage lottery with objective probabilities.
-In Stage 1, one of the 32 wheels is randomly drawn.
-In Stage 2, the number of blue sectors in the randomly selected wheel is compared with the participant's MAP.
-Should this number be equal to or exceed her MAP, the participant spins the virtual wheel for her payoff.
-Should the number be lower than her MAP, the wheel is not spun, and the participant receives the intermediate safe payoff.
-
 Should participants be expected utility maximizers, their MAPs should not differ between the three treatments.
 This would be in line with what \cite{Bohnet2004,Bohnet2008} assume.
-However, if participants have preferences over the distribution of winning probabilities (Stage 1 risk), the MAPs will capture these preferences and may differ between treatments.
-A large literature in economics and finance shows that individuals have preferences over higher moments of the distribution of risks \textcolor{red}{cite} \citep{Ebert2014,Ebert2015,Grossman2015}.
 
-%whether the world in which one chooses the indifference value for the MAP influences the MAP.
-%If \cite{Bohnet2008} are right and the estimated value of the true winning probability does not influence MAP, then we should not see significant differences between treatments.
+In their Appendix A, \cite{Li2020a} show by means of a numerical example that if participants are not expected utility maximizers, ambiguity aversion alone could generate the pattern attributed to betrayal aversion.
+Since there is evidence that attitudes towards complex risks and attitudes towards ambiguity are correlated \citep{Armantier2016}, we redo their numerical exercise for our three distributions: the Good, the Bad and the Uniform in \textcolor{red}{Appendix XYZ}.
+For this calculation we thus assume that participants view the tasks as complex risky situations---and this underlies their inverse S-shaped probability weighting.
 
-%However, there is evidence that individuals change their views on what is a fair payoff/what they can request as an indifference value depending on the world they are in \citep{Bohnet2008,Bohnet2010}.\footnote{
-%\cite{Bohnet2010} discuss culturally different reference points for trustworthiness which can influence the MAP.
-%The claim we test is different: that (some of) the observed difference between treatments in their paper and many others is not due to the social or strategic dimensions of a trusting interaction, but to a difference in underlying distributions of the probability of winning---which could influence the MAP through changing reference points for what is a fair deal.
-%}
-
-%A world $A$ is friendlier than another world $B$ if the cumulative density (mass) function of $p^*$ in $A$ is below the cumulative density (mass) function of $p^*$ in $B$ for $p^*$ in [0,1], where the range of states for worlds $A$ and $B$ is the same.
-
-This literature generally finds a dislike for left-skewed (negatively skewed) risks, holding mean and variance constant.
-In this paper, the more left-skewed a distribution, the higher its expected value (while the standard deviation is fairly similar at 4.61--4.62 in all three treatments).\footnote{
-The Bad and the Uniform distribution were chosen to reflect potential distributions imagined by participants in \cite{Bohnet2004} and \cite{Bohnet2008} in the Trust Game and in the Decision Problem, respectively.
-Specifically, the Bad distribution has an expected probability of a blue sector over all 32 wheels of 0.2895, close to $p^*$ in the Trust Game.
-The Uniform distribution is plausibly what participants in the Decision Problem expected to face.}
-We test empirically whether the net effect of preferences over risks of all orders makes a difference for MAPs in this setting.
-
-On the one hand, we could expect this threshold to be higher the more favorable the distribution of risks, for instance because of (i) a different perception of what is a fair chance or (ii) anchoring on higher values (for instance, a higher mean of $p^*$) or (iii) a different thrill from gambling or (iv) different aspiration levels or (v) different reference points---leading to different loss aversion effects.\footnote{
-The post-experimental survey could shed some light on whether \textcolor{red}{(some of)} the factors matter.
-We leave it to future research to study the mechanisms at play, should we find that results in line with our expectations.
+This calculation leads to the following hypotheses.\footnote{
+For details, see \textcolor{red}{Appendix XYZ}.
 }
 
-On the other hand, research on risk taking at different levels of skewness has shown that individuals are more risk taking for lotteries which are more left skewed \citep{Bougherara2021}.
-From this, we expect the highest MAP for the Bad distribution, followed by the MAP for the Uniform distribution, followed by the MAP for the Good distribution.
-
-
-This leads to the following hypotheses.
 
 \subsection{Hypotheses}
 \subsubsection{Main hypotheses}
-\noindent \textbf{Hypothesis 1} \quad \textit{The MAP in the world with left skew (more mass on high values of $p^*$) is higher than the MAP in the world with right skew (more mass on low values of $p^*$).}
+\noindent \textbf{Hypothesis 1} \quad \textit{The MAP in the Good treatment (more mass on high values of $p^*$) is lower than the MAP in the Bad treatment (more mass on low values of $p^*$).}
 
-\noindent \textbf{Hypothesis 2} \quad \textit{The MAP in the world with left skew (more mass on high values of $p^*$) is higher than the MAP in the world with a uniform distribution over $p^*$.}
+\noindent \textbf{Hypothesis 2} \quad \textit{The MAP in the Good treatment (more mass on high values of $p^*$) is lower than the MAP in the Uniform treatment (a uniform distribution over $p^*$).}
 
-\noindent \textbf{Hypothesis 3} \quad \textit{The MAP in the world with right skew (more mass on low values of $p^*$) is lower than the MAP in the world with a uniform distribution over $p^*$.}
+\noindent \textbf{Hypothesis 3} \quad \textit{The MAP in the Bad treatment (more mass on low values of $p^*$) is higher than the MAP in the Uniform treatment (a uniform distribution over $p^*$).}
 
 \subsubsection{Heterogeneity}
-Since the MAP is a way to gauge risk aversion, we expect that in the same world, females state higher MAPs than males on average.
+Since the MAP is a way to gauge (complex) risk aversion, we expect that in the same treatment females state higher MAPs than males on average.
 
-\noindent \textbf{Hypothesis 4} \quad \textit{Within each world, females require higher MAPs on average than males.}
+\noindent \textbf{Hypothesis 4} \quad \textit{Within each treatment, females require higher MAPs on average than males.}
 
 Our treatments vary the objective distribution of the winning probability.
 How subjects process these probabilities might depend on things like (i) their optimism/pessimism \textcolor{red}{etc}.
@@ -349,7 +340,7 @@ These heterogeneity analyses will be based on subsamples resulting from answers 
 Gender is among the demographics which we can obtain from Prolific.
 }
 
-\noindent \textbf{Hypothesis 5} \quad \textit{Within each world, more optimistic individuals require lower MAPs on average than pessimistic individuals.}
+\noindent \textbf{Hypothesis 5} \quad \textit{Within each treatment, more optimistic individuals require lower MAPs on average than pessimistic individuals.}
 
 %\textcolor{red}{Maybe a question on taking risks? Concerns with fairness? External reference point for earnings e.g. how much should a 45-minute survey pay for you to be willing to take it (if it pays a fixed amount)?--> if international sample, allow them to select currency}
 
@@ -364,7 +355,7 @@ The main hypotheses (1--3) will be tested using the following regression:
 MAP_i = \beta + \beta_L L + \beta_R R + \epsilon_i
 \end{equation}
 
-\noindent where $MAP_i$ is the MAP chosen by participant $i$, $L$ is an indicator which takes the value of 1 if the decision was made in the left skew world, $R$ is an indicator which is 1 if the decision was made in the right skew world and $\epsilon_i$ is a random error term.
+\noindent where $MAP_i$ is the MAP chosen by participant $i$, $L$ is an indicator which takes the value of 1 if the decision was made in the Good treatment, $R$ is an indicator which is 1 if the decision was made in the Bad treatment and $\epsilon_i$ is a random error term.
 Standard errors in the estimation will be clustered at the individual level.
 
 For heterogeneity analyses, we will interact all terms in equation (\ref{eq:1}) with an indicator variable corresponding to each specific hypothesis.
@@ -393,18 +384,18 @@ The formal statements of the hypotheses are in the Appendix.
 
 \subsection{Hypothesis 1}
 $H0: \beta_L - \beta_R = 0 \\
-H1: \beta_L - \beta_R > 0$
+H1: \beta_L - \beta_R < 0$
 
 \subsection{Hypothesis 2}
 $H0: \beta_L = 0 \\
-H1: \beta_L > 0$
+H1: \beta_L < 0$
 
 \subsection{Hypothesis 3}
 $H0: \beta_R = 0 \\
 H1: \beta_R > 0$
 
 \subsection{Hypothesis 4}
-Within each world:
+Within each treatment:
 
 \noindent $H0: \beta^F = 0 \\
 H1: \beta^F > 0$
