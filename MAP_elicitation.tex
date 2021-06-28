@@ -1,0 +1,134 @@
+\begin{filecontents}{preliminary.sty}
+\ProvidesPackage{preliminary}
+%\DeclareOption{draft}{%
+  \AtBeginDocument{%
+    \renewcommand\maketitlehookc{%
+      \begin{center}\textit{Very preliminary---please do not cite}\end{center}}}
+      %}
+\ProcessOptions
+\RequirePackage{titling}
+\endinput
+\end{filecontents}
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage[centertags,reqno]{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics,subfigure}
+\usepackage[dvips]{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{appendix}
+\usepackage{natbib}
+\usepackage{verbatim,color}
+\usepackage{pdflscape}
+\usepackage[showframe=false]{geometry}
+\usepackage{changepage}
+\usepackage{xcolor}
+\usepackage{eurosym}
+\usepackage{textcomp}
+\usepackage[open,openlevel=1]{bookmark}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{hyphenat}
+\usepackage{listings} % To include a Stata .do file
+\usepackage{pdfpages} % To include the instructions from a pdf file
+\newcommand{\mybox}[2]{{\color{#1}\fbox{\normalcolor#2}}}
+\doublespacing
+
+% Exception to hyphenation
+\hyphenation{par-ti-ci-pants}
+\hyphenation{par-ti-ci-pant}
+\hyphenation{Hy-po-the-sis}
+\hyphenation{ex-pe-ri-ment}
+\hyphenation{ex-pe-ri-ments}
+
+% Allows bigger tables to be scaled down
+\usepackage{adjustbox}
+
+%From my paper with Raymond
+\usepackage{tabularx,calc}
+\usepackage{dcolumn}                    % Aligns tables on the decimal point
+\newcolumntype{d}[1]{D{.}{.}{#1}}       %       Aligns on dot
+\newcolumntype{.}{D{.}{.}{3.5}}         %       Somehow it works better
+\newcolumntype{C}{@{\extracolsep{.6cm}}c@{\extracolsep{0pt}}}
+\usepackage{threeparttable}
+\usepackage{siunitx,booktabs}
+\sisetup{
+    detect-all,
+    round-integer-to-decimal = true,
+    group-digits             = true,
+    group-minimum-digits     = 4,
+    group-separator          = {\,},
+    table-align-text-pre     = false,
+    table-align-text-post    = false,
+    input-signs              = + -,
+    input-symbols            = {*} {**} {***},
+    input-open-uncertainty   = ,
+    input-close-uncertainty  = ,
+    retain-explicit-plus
+}
+
+% Commands to name appendices Appendix A, Appendix B, etc.
+\makeatletter
+%% The "\@seccntformat" command is an auxiliary command
+%% (see pp. 26f. of 'The LaTeX Companion,' 2nd. ed.)
+\def\@seccntformat#1{\@ifundefined{#1@cntformat}%
+   {\csname the#1\endcsname\quad}  % default
+   {\csname #1@cntformat\endcsname}% enable individual control
+}
+\let\oldappendix\appendix %% save current definition of \appendix
+\renewcommand\appendix{%
+    \oldappendix
+    \newcommand{\section@cntformat}{\appendixname~\thesection\quad}
+}
+
+%Adds text specifying it is a preliminary version
+%\usepackage{preliminary}
+
+\title{Testing the Elicitation Procedure \\ of the Minimum Acceptable Probability}
+\author{Maria Polipciuc\thanks{Maastricht University. Email: \url{m.polipciuc@maastrichtuniversity.nl}. We thank Elias Tsakas and participants in the BEELab proposal meeting for valuable comments.} \and Martin Strobel\footnotemark[1]}
+\date{\today	\vspace{1cm}}
+\titlepage
+
+
+\begin{document}
+\begin{titlepage}
+\clearpage
+\maketitle
+\thispagestyle{empty}
+
+
+\begin{abstract}
+
+\end{abstract}
+\end{titlepage}
+
+
+\section{Introduction}\label{sec:intro}
+Imagine a lottery and a sure payment.
+You know how much you receive if you win or lose the lottery, but you don't know the chances of each outcome.
+Now imagine you have to write a contract specifying how good the lottery minimally has to be for you to prefer the lottery over the sure payment.
+Would the requirement you set in the contract be independent of how likely you think more (less) favorable lotteries are?
+As an example: would you set the same requirement in two situations, one in which favorable lotteries are more likely, and the other in which unfavorable lotteries are more likely?
+
+From a theoretical point of view, things are clear.
+If you are a rational expected utility maximizer, the requirement should be the same in both situations.
+If you're not and the context influences your decisions, it is not so clear which way things will go.
+Will you require a better or a lesser chance to take the lottery in a world of better opportunities?
+
+This note reports the findings of an online experiment designed to test whether a more favorable underlying distribution of the chances of the lottery influences the threshold people require.
+Our interest in this question was sparked by previous work on betrayal aversion.
+Betrayal aversion has been identified as one of the factors influencing the decision to trust.
+It is defined as an anticipatory disutility from expecting one's trust to be betrayed.
+Betrayal aversion has been identified as the premium required to trust someone relative to accepting an equiprobable lottery with equal payoff consequences for an uninvolved other.
+
+Most older papers on the subject of betrayal aversion find a positive strategic premium.
+Some papers however do not.
+\cite{Li2020} propose that the original BZ design might have miss-classified the premium as betrayal aversion.
+They argue that, should participants not be rational expected utility maximizers, the premium could be attributed to ``ambiguity attitudes, complexity, different beliefs, and dynamic optimization''.
+
+In this note, we examine the effect of one of these potential confounds: different underlying distributions of the lottery's winning chances.
+
+\end{document}
