@@ -1202,4 +1202,28 @@
   publisher = {The Econometric Society},
 }
 
+@Article{Schneider2019,
+  author    = {Florian H. Schneider and Martin Schonger},
+  journal   = {Management Science},
+  title     = {An Experimental Test of the Anscombe{\textendash}Aumann Monotonicity Axiom},
+  year      = {2019},
+  month     = {apr},
+  number    = {4},
+  pages     = {1667--1677},
+  volume    = {65},
+  doi       = {10.1287/mnsc.2017.3010},
+  publisher = {Institute for Operations Research and the Management Sciences ({INFORMS})},
+}
+
+@Article{Karni1987,
+  author  = {Edi Karni and Zvi Safra},
+  journal = {Econometrica},
+  title   = {``Preference Reversal" and the Observability of Preferences by Experimental Methods},
+  year    = {1987},
+  month   = may,
+  number  = {3},
+  pages   = {675--685},
+  volume  = {55},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
