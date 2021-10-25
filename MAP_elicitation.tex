@@ -107,6 +107,9 @@
 
 
 \section{Introduction}\label{sec:intro}
+
+
+
 Imagine a lottery and a sure payment.
 You know how much you receive if you win or lose the lottery, but you don't know the chances of each outcome.
 Now imagine you have to write a contract specifying how good the lottery minimally has to be for you to prefer the lottery over the sure payment.
@@ -118,7 +121,7 @@ If you are a rational expected utility maximizer, the requirement should be the 
 If you're not and the context influences your decisions, it is not so clear which way things will go.
 Will you require a better or a lesser chance to take the lottery in a world of better opportunities?
 
-This note reports the findings of an online experiment designed to test whether a more favorable underlying distribution of the chances of the lottery influences the threshold people require.
+This note reports the findings of an online experiment designed to test whether a more favorable underlying distribution of the chances of the lottery influences the threshold people require to take the lottery rather than the sure payment.
 Our interest in this question was sparked by previous work on betrayal aversion.
 Betrayal aversion has been identified as one of the factors influencing the decision to trust.
 It is defined as an anticipatory disutility from expecting one's trust to be betrayed.
@@ -129,23 +132,63 @@ Some papers however do not.
 \cite{Li2020a} propose that the original BZ design might have miss-classified the premium as betrayal aversion.
 They argue that, should participants not be rational expected utility maximizers, the premium could be attributed to ``ambiguity attitudes, complexity, different beliefs, and dynamic optimization''.
 
-In this note, we examine the effect of one of these potential confounds: different underlying distributions of the lottery's winning chances.
+In this note, we examine the effect of one of these potential confounds: different beliefs.
+We do this by manipulating the underlying distributions of the lottery's winning chances.
+
+To derive our hypotheses, we make the same assumptions as in numerical example by \cite{Li2020a} in Appendix A.\footnote{
+\cite{Li2020a} use this example to show that ambiguity aversion alone may cause the strategic risk premium attributed to betrayal aversion.
+}
+Under these assumptions, we hypothesize that the threshold for preferring the lottery over the sure payment will be lowest in The Good treatment, followed by The Uniform treatment, and followed by The Bad treatment.\footnote{
+For details, see \textcolor{red}{Appendix...}.}
+
+Our results however clearly show the reverse ordering than predicted: participants set the lowest threshold in The Bad treatment, followed by The Uniform, followed by The Good.
+This pattern has been found in a related strand of literature.
+This strand examines how valuations obtained using the Becker-DeGroot-Marschak mechanism \citep{Becker1964} are influenced by the underlying price distribution.
+In the Becker-DeGroot-Marschak (BDM) mechanism, a potential buyer states the maximum price for which she is willing to buy a good.
+A price is drawn, and if it is lower than or equal to the price she stated, she buys the good.
+If the price is higher, she keeps her endowment and does not buy the good.
+\cite{Karni1987} and \cite{Horowitz2006} have shown theoretically that the mechanism is incentive compatible only if participants are rational expected utility maximizers.
+Experimental studies generally find that people are willing to pay more for the same good if its price comes from a left-skewed distribution (with more mass on high prices) than when it comes from a right-skewed one CITE.
+
+Both betrayal aversion and the design used in this note use versions of the BDM mechanism.
+For this reason, the above-mentioned literature could provide an explanation for the pattern observed in our data.
+
 
 \section{Procedures}\label{sec:proced}
 We use three distributions, which are ordered in terms of the expected payoff over the entire distribution, as their name suggests: the Good, the Bad, and the Uniform.
 Two of the three distributions were selected to emulate treatments in papers on betrayal aversion.
-The Uniform treatment has equal chances of occurrence for each of the possible lotteries.
+The first of these two (The Uniform) has equal chances of occurrence for each of the possible lotteries.
 We assume that this is what participants expect to face in treatments with computer drawn lotteries, unless specified otherwise.
-The Bad treatment has an overall chance of a high payoff equal to the percentage of trustworthy respondents in papers on betrayal aversion.
+The second (The Bad) has an overall chance of a high payoff equal to the percentage of trustworthy respondents in papers on betrayal aversion.
 The distribution in the Good treatment mirrors the one in the Bad treatment: it has the same variance, and minus the skewness of the Bad distribution.
 
 \textcolor{red}{include table describing distributions}
 
+To make the task easier to understand, we represent lotteries via wheels of fortune.
+In each treatment, participants see the entire distribution of lotteries in that treatment, sorted in ascending order by the probability of the favorable outcome.
+Figure \textcolor{red}{XZY} below shows the distribution for The Good treatment.
+Dark blue sectors symbolize the high payoff, light blue sectors---the low payoff.
 Participants have to state a \textit{minimum acceptable probability} (MAP): the lowest chance of a favorable outcome of the lottery such that they prefer the lottery to a sure payoff.
+Since there is evidence that participants have an easier time expressing choice using integers than probabilities \citep{Quercia2016}, we ask them to answer a question which requires an integer as an input.
+Specifically, they have to answer: ``Which wheels would you like to spin for your bonus?'' by inserting an integer between 0 and 15 in the blank space in the sentence: ``I prefer to spin wheels which have at least \textit{[blank]} dark blue sectors.''
+
+The experiment was conducted online using Qualtrics.
+Participants were UK residents registered on a platform for conducting academic studies (Prolific).
+Since the elicitation of MAPs is rather complex \citep{Quercia2016,Polipciuc2020}, we opted for participants who had at least a bachelor's degree.
+The study was pre-registered at the AEA RCT Registry (https://doi.org/10.1257/rct.7776-1.1).
+275 of the 450 participants answered the eliminatory comprehension questions correctly and completed the experiment.
+Those who completed the experiment (did not complete the experiment) spent a median time of 12.4 (5.9) minutes and earned 5 (1) UK pounds.
+
+
+
 
 Several papers CITE find that when dealing with complex risks, participants in experiments require an extra premium compared to simple risk aversion.
 This premium is positively correlated with ambiguity aversion. (ARE EFFECT size similar?)
 
 
+\clearpage
+\pagebreak
+\bibliographystyle{apalike}
+\bibliography{Communities}
 
 \end{document}
