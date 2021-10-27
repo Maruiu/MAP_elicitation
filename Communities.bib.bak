@@ -1218,7 +1218,7 @@
 @Article{Karni1987,
   author  = {Edi Karni and Zvi Safra},
   journal = {Econometrica},
-  title   = {``Preference Reversal" and the Observability of Preferences by Experimental Methods},
+  title   = {``{P}reference Reversal" and the Observability of Preferences by Experimental Methods},
   year    = {1987},
   month   = may,
   number  = {3},
@@ -1229,7 +1229,7 @@
 @Article{Horowitz2006,
   author    = {John K. Horowitz},
   journal   = {Economics Letters},
-  title     = {The Becker-{DeGroot}-Marschak mechanism is not necessarily incentive compatible, even for non-random goods},
+  title     = {The {B}ecker-{DeGroot}-{M}arschak mechanism is not necessarily incentive compatible, even for non-random goods},
   year      = {2006},
   month     = {oct},
   number    = {1},
@@ -1261,18 +1261,6 @@
   pages   = {571},
   volume  = {57},
   doi     = {10.2307/1911053},
-}
-
-@Article{Karni1987a,
-  author  = {Edi Karni and Zvi Safra},
-  journal = {Econometrica},
-  title   = {"Preference Reversal" and the Observability of Preferences by Experimental Methods},
-  year    = {1987},
-  month   = {may},
-  number  = {3},
-  pages   = {675},
-  volume  = {55},
-  doi     = {10.2307/1913606},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
