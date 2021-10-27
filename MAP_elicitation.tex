@@ -64,7 +64,7 @@
     table-align-text-pre     = false,
     table-align-text-post    = false,
     input-signs              = + -,
-    input-symbols            = {*} {**} {***},
+    input-symbols            = {*},
     input-open-uncertainty   = ,
     input-close-uncertainty  = ,
     retain-explicit-plus
@@ -160,7 +160,11 @@ Participants were UK residents registered on a platform for conducting academic 
 Since the elicitation of MAPs is rather complex \citep{Quercia2016,Polipciuc2020}, we opted for participants who had at least a bachelor's degree.
 The study was pre-registered at the AEA RCT Registry (https://doi.org/10.1257/rct.7776-1.1).
 275 of the 450 participants answered the eliminatory comprehension questions correctly and completed the experiment.
-Those who completed the experiment (did not complete the experiment) spent a median time of 12.4 (5.9) minutes and earned 5 (1) UK pounds.
+Those who completed the experiment (did not complete the experiment) spent a median time of 12.4 (5.9) minutes and earned 5 (1) UK pounds.\footnote{
+The high median earnings of those who completed the experiment are due to a coding error.
+Instead of all decisions in all three treatments being equally likely to be selected for payment, the error lead to only The Good and The Uniform treatments being selected, \textcolor{red}{with the probabilities indicated in parentheses}. CHECK
+Participants were informed about the error, which increased the payoffs of all participants who had completed the experiment.
+}
 
 
 
@@ -178,6 +182,107 @@ According to the calculation in \textcolor{red}{Appendix...}, we expect the foll
 \begin{equation}
 MAP_G < MAP_U < MAP_B
 \end{equation}
+
+In the pre-analysis plan, we specified that the alternative hypothesis ($MAP_B < MAP_U < MAP_G$) could be true instead if participants anchor on visual cues of the distributions, such as the mean.
+
+\section{Data and results}\label{sec:results}
+First, we present summary statistics for all decisions, by treatment and by decision order.
+Next, we run non-parametric tests and ordinary least squares regressions to test the hypothesis.
+
+Table \ref{tab:stats} presents the average MAP by treatment over all decisions and by decision order.
+Already from this table we can see that the hypothesis is not supported by the data.
+
+
+\begin{table}[htbp]
+\centering \caption{Descriptive statistics: MAPs by treatment}\label{tab:stats}
+\begin{threeparttable}
+\begin{tabular}
+   {@{}
+	l
+	*4{S[table-format=+1.5, table-space-text-pre={**}, table-space-text-post={-**}]}
+	@{}
+	}
+\toprule
+	&{All	decisions}&{First decision}&{Second	decision}&{Third	decision}\\
+\cmidrule{2-5}
+The Good	&	9.531&       9.571&       9.458&	9.553\\
+	&	(2.503)&     (2.270)&     (2.500)&	(2.750)\\
+The Uniform	&	8.844&       8.890&       8.368&	9.227\\
+	&	(2.382)&     (2.392)&     (2.119)&	(2.539)\\
+The Bad	&	8.615&       8.093&       9.124&	8.512\\
+	&	(2.522)&     (2.597)&     (2.491)&	(2.387)\\
+\midrule
+N	&	{825}&       {275}&       {275}&	{275}\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Notes:} The table shows averages per treatment.
+Each participant made three decisions in randomized order.
+Standard deviations in parentheses.
+Possible answers were integers between 0 and 15.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+A non-parametric Page's L test confirms this: there is strong evidence that the ordering is the opposite to the one hypothesized ($MAP_B < MAP_U < MAP_G$, $p$-value<0.001).\footnote{
+Page's L test has the null hypothesis that all possible orderings are equally likely.
+The alternative hypothesis is that a specified order is the increasing order of alternatives.
+The Stata command is $pagetrend$.
+}
+
+
+
+
+\begin{table}[htbp]
+\centering \caption{Linear regressions on Minimum Acceptable Frequencies}\label{tab:reg}
+\begin{threeparttable}
+\begin{tabular}
+   {@{}
+	l
+	*4{S[table-format=+1.5, table-space-text-pre={**}, table-space-text-post={-**}]}
+	@{}
+	}
+\toprule
+\textbf{Dependent variable:}& \multicolumn{4}{c}{Minimum	acceptable frequency}\\
+&       {(1)}   &       {(2)}   &	{(3)}   &       {(4)}   \\
+\cmidrule(rl){2-5}
+The Good            &       0.687***&       0.687***&	0.687***&       0.687***\\
+&     (0.099)   &     (0.099)   &	(0.099)   &     (0.099)   \\
+The Bad             &      -0.229***&      -0.229***&	-0.229***&      -0.229***\\
+&     (0.070)   &     (0.070)   &	(0.070)   &     (0.070)   \\
+Age                 &               &       0.005   &	0.006   &       0.006   \\
+&               &     (0.013)   &	(0.013)   &     (0.014)   \\
+Male                &               &      -0.047   &	0.030   &      -0.029   \\
+&               &     (0.286)   &	(0.284)   &     (0.283)   \\
+Risk aversion (0--10)&               &               &	-0.172** &      -0.152** \\
+&               &               &	(0.074)   &     (0.074)   \\
+\textit{Sequence} &&&& \\
+\qquad UBG                 &               &               &	&       0.490   \\
+&               &               &	&     (0.408)   \\
+\qquad BGU                 &               &               &	&      -0.008   \\
+&               &               &	&     (0.434)   \\
+\qquad GBU                 &               &               &	&       1.173***\\
+&               &               &	&     (0.412)   \\
+\qquad BUG                 &               &               &	&      -0.150   \\
+&               &               &	&     (0.434)   \\
+\qquad UGB                 &               &               &	&       0.469   \\
+&               &               &	&     (0.433)   \\
+Constant            &       8.844***&       8.696***&	9.520***&       9.066***\\
+&     (0.144)   &     (0.460)   &	(0.593)   &     (0.627)   \\
+\midrule
+N                   &       {825}   &       {825}   &	{825}   &       {825}   \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Notes:} Standard errors clustered at the individual level in parentheses.
+The baseline treatment is The Uniform.
+The baseline sequence is GUB (Good--Uniform--Bad).
+Risk attitudes are measured on a 0--10 scale, where 0 is very risk averse and 10 is very risk loving. \\
+* p $<$ 0.10, ** p $<$ 0.05, *** p $<$ 0.01.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
 
 
 \clearpage
