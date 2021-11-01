@@ -1181,7 +1181,7 @@
 }
 
 @Article{Becker1964,
-  author  = {Becker, G.M. and De Groot, M.H. and Marshak, J.},
+  author  = {Becker, G.M. and DeGroot, M.H. and Marshak, J.},
   journal = {Behavioral Science},
   title   = {Measuring utility by a single-response sequential method},
   year    = {1964},
@@ -1242,7 +1242,7 @@
 @Article{Tymula2016,
   author    = {Agnieszka Tymula and Eva Woelbert and Paul Glimcher},
   journal   = {Journal of Neuroscience, Psychology, and Economics},
-  title     = {Flexible valuations for consumer goods as measured by the Becker{\textendash}{DeGroot}{\textendash}Marschak mechanism.},
+  title     = {Flexible valuations for consumer goods as measured by the {B}ecker{\textendash}{DeGroot}{\textendash}{M}arschak mechanism.},
   year      = {2016},
   number    = {2},
   pages     = {65--77},
