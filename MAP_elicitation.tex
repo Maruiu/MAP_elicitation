@@ -37,6 +37,8 @@
 \newcommand{\mybox}[2]{{\color{#1}\fbox{\normalcolor#2}}}
 \doublespacing
 
+
+
 % Exception to hyphenation
 \hyphenation{par-ti-ci-pants}
 \hyphenation{par-ti-ci-pant}
@@ -112,32 +114,31 @@ In the context of trust games, this strategic risk premium has been dubbed \text
 Many papers find that betrayal aversion is an important determinant of trust CITE.
 
 Betrayal aversion is identified as the difference in first mover behavior in two games: a binary trust game CITATION and an equivalent game where the decision at the second node is made by a random device.
-First movers typically have to indicate their \textit{minimum acceptable probability} (MAP), which is a strategy-method elicitation procedure CITE which has many features in common with the Becker--DeGroot--Marschak mechanism.
+First movers typically have to indicate their \textit{minimum acceptable probability} (MAP), which is a strategy-method elicitation procedure CITE which has many features in common with the Becker--DeGroot--Marschak mechanism (BDM).
 That is, prior to knowing how many second movers (devices) chose the favorable outcome at the second node, first movers have to state their conditional threshold probability of the good outcome at the second node for preferring to send money to the second mover over the outside option (which keeps the two players' equal initial endowments unchanged).
 Then, should that threshold be reached or exceeded, first movers send money to second movers, and the outcome is decided by their matched second mover's choice (their matched device's choice).
 Should the threshold not be met, the outside option is implemented.
 
-A recent paper has shown theoretically that the elicitation procedure of minimum acceptable probabilities used in most papers leaves the door open to potential confounds such as ``ambiguity attitudes, complexity, different beliefs, and dynamic optimization'' \citep{Li2020a} if players are not rational expected utility maximizers.
-Moreover, a couple of empirical papers which use more stringent identification procedures for betrayal aversion by controlling for beliefs in the two games do not find betrayal aversion \citep{Fetchenhauer2012,Polipciuc2020}, or find it to play a role for trusting only when beliefs are far more optimistic than is generally the case \citep{Engelmann2021}.
+A recent paper has shown theoretically that the elicitation procedure of minimum acceptable probabilities used in most papers on betrayal aversion leaves the door open to potential confounds such as ``ambiguity attitudes, complexity, different beliefs, and dynamic optimization'' \citep{Li2020a} if players are not rational expected utility maximizers.
+Moreover, a couple of empirical papers which use more stringent identification procedures for betrayal aversion by controlling for beliefs in the two games do not find betrayal aversion (\citeauthor{Fetchenhauer2012}, \citeyear{Fetchenhauer2012}, the second experiment in \citeauthor{Polipciuc2021}, \citeyear{Polipciuc2021}), or find it to play a role for trusting only when beliefs are far more optimistic than is generally the case \citep{Engelmann2021}.
+Several papers CITE find that when dealing with complex risks, participants in experiments require an extra premium compared to simple risk aversion.
+This premium is positively correlated with ambiguity aversion. (ARE EFFECT size similar?)
 
 In this note, we use an online experiment to measure how much of what has been called betrayal aversion is due to distributional dependence, regardless of the source of risk being random or strategic.
 We remove the strategic component and show participants complete distributions over probabilities of the good (and bad) outcome of a lottery, and ask them to state their cutoff probability of the favorable outcome for preferring the lottery to a safe payoff.
-Should the numerical example in \cite[Appendix A in][]{Li2020a} be applicable to our setting, we expect participants to more readily accept the lottery when it comes from a distribution with a higher expected value.
+Since this is a situation involving complex risk, we expect a premium between the distribution mimicking the control condition in betrayal aversion studies and the distribution mimicking the binary trust game condition, as suggested by \cite{Li2020}.
 We find the opposite to be true: the higher the expected value of the probability of the favorable outcome, the higher the minimum acceptable probability required by participants to accept the lottery.
 
-While this is at odds with our expectations, it ties in with findings from the empirical literature on distributional dependence of willingness to pay (WTP).
-%To make this clear, we first explain how betrayal aversion is related to WTP.
-%\textcolor{red}{I need something here...}
-%Betrayal aversion is identified as the difference between two minimum acceptable probabilities: the minimum required probability of trustworthiness in order to trust in a trust game, and the minimum required probability of a favorable outcome in an equiprobable control game, where risk is generated by a randomization device.
-The MAPs from which one identifies betrayal aversion are elicited through a variant of the Becker--Degroot--Marschak (BDM) \citep{Becker1964} mechanism, which is an often used mechanism for eliciting valuations.
-In the Becker--DeGroot--Marschak mechanism, a potential buyer states the maximum price for which she is willing to buy a good.
-A price is drawn, and if it is lower than or equal to the price she stated, she buys the good.
-If the price is higher, she keeps her endowment and does not buy the good.
-There a couple of differences between the `standard' BDM and MAP elicitation: (1) the auctioned good is a lottery, (2) instead of giving a maximum price for which they prefer the good to a safe payment, participants are asked to state a minimum probability of the favorable outcome of the lottery for which they prefer the lottery to a safe payment and (3) the underlying distribution of the probability of the favorable outcome is not (implicitly) uniform, as is the case in most studies using the distribution of potential prices for the good.
-
-Theoretical literature has pointed out that the BDM mechanism is not incentive compatible if players are not rational expected utility maximizers \citep{Karni1987,Horowitz2006}.
+While this is at odds with our expectations, it ties in with findings from the empirical literature on distributional dependence of willingness to pay (WTP) as elicited through the BDM mechanism.
+Similarly to betrayal aversion, theoretical literature has pointed out that the BDM mechanism is not incentive compatible if players are not rational expected utility maximizers \citep{Karni1987,Horowitz2006}.
 This is because individuals face uncertainty regarding the price of the good and additional uncertainty about whether they will buy the good or not.
 If their utility function is influenced by these uncertainties, changing the price distribution of the good might influence their MAP.
+
+%The MAPs from which one identifies betrayal aversion are elicited through a variant of the Becker--Degroot--Marschak (BDM) \citep{Becker1964} mechanism, which is an often used mechanism for eliciting valuations.
+%In the Becker--DeGroot--Marschak mechanism, a potential buyer states the maximum price for which she is willing to buy a good.
+%A price is drawn, and if it is lower than or equal to the price she stated, she buys the good.
+%If the price is higher, she keeps her endowment and does not buy the good.
+%There a couple of differences between the `standard' BDM and MAP elicitation: (1) the auctioned good is a lottery, (2) instead of giving a maximum price for which they prefer the good to a safe payment, participants are asked to state a minimum probability of the favorable outcome of the lottery for which they prefer the lottery to a safe payment and (3) the underlying distribution of the probability of the favorable outcome is not (implicitly) uniform, as is the case in most studies using the distribution of potential prices for the good.
 
 Several empirical papers find this to be the case: generally, the higher the expected price of the good, the higher the WTP \citep[for a short review of this literature, see][]{Tymula2016}.
 \textcolor{red}{Here I plan to say something about possible things which may be causing the result. For this, I have to understand if two papers cited by \cite{Tymula2016}---\cite{Koszegi2006} and \cite{Wenner2015}---are relevant for our study, and what they imply for our findings.}
@@ -150,15 +151,18 @@ Section \ref{sec:discussion} explains how our results inform the existing litera
 
 
 \section{Design and procedures}\label{sec:proced}
-The experiment uses a within-subject design, with each subject being exposed to all treatments sequentially.
-We use three distributions as treatments.
+We use a within-subject design, with each subject being exposed to all treatments sequentially.
+In each treatment, participants see a distribution over a lottery with two possible outcomes: a high payoff and a low payoff.
+A lottery will be drawn at random from the distribution.
+This means in some treatments it is more likely to get a lottery with a high chance of a high payoff than in others.
+We use three distributions over lotteries.
 The distributions are ordered in terms of the expected payoff over the entire distribution, as their name suggests: the Good, the Bad, and the Uniform (the Good $>$ the Uniform $>$ the Bad).
 
 Two of the three distributions are meant to emulate treatments in papers on betrayal aversion.
 The Uniform distribution has equal chances of occurrence for each of the possible lotteries.
 We assume that this is what participants expect to face in treatments with decisions made by randomization devices, unless specified otherwise.
 The Bad distribution has an overall chance of a high payoff similar to the share of trustworthy respondents in papers on betrayal aversion (0.2895).
-The distribution in the Good treatment mirrors the one in the Bad treatment: it has the same variance, and minus the skewness of the Bad distribution.
+The distribution in the Good treatment mirrors the one in the Bad treatment: its overall expected chance of a high payoff is one minus that in the Bad treatment (0.7105), it has the same variance and minus the skewness of the Bad distribution.
 We included this distribution to check if departures from the Uniform distribution in either direction yield effects of similar size (albeit reverse sign).
 
 \textcolor{red}{include table describing distributions}
@@ -207,7 +211,7 @@ Figure \ref{fig:TheGood} below shows the distribution for the Good treatment.
 Participants are told that one of the wheels will be drawn at random, with all wheels having an equal chance to be drawn.
 They are asked to state a \textit{minimum acceptable frequency} (which we refer to as MAP, even though it does not refer to a probability, but to a frequency, for an easier comparison with papers on betrayal aversion): the lowest number of dark blue sectors in the selected wheel such that they prefer to spin the wheel for their payoff instead of receiving the sure payoff.\footnote{
 Since there is evidence that participants have an easier time expressing choice using integers than using probabilities \citep{Quercia2016}, we ask participants to input an integer.}
-Specifically, they have to answer: ``Which wheels would you like to spin for your bonus?'' by inserting an integer between 0 and 15 in the blank space: ``I prefer to spin wheels which have at least \textit{[blank]} dark blue sectors.''
+Specifically, they have to answer: ``Which wheels would you like to spin for your bonus?'' by inserting an integer between 0 and 15 in the blank space: ``I prefer to spin wheels which have at least \rule{1cm}{0.15mm} dark blue sectors.''
 
 \begin{figure}[h!]
   \centering
@@ -220,16 +224,6 @@ The experiment was conducted online using Qualtrics.
 Participants were UK residents registered on a platform for conducting academic studies (Prolific).
 Since the elicitation of MAPs is rather complex \citep{Quercia2016,Polipciuc2020}, we opted for participants who had at least a bachelor's degree.
 The study was pre-registered at the AEA RCT Registry (https://doi.org/10.1257/rct.7776-1.1).
-
-Table \ref{tab:sample} in \textcolor{red}{Appendix ...} describes the sample.
-Treatment was assigned in order to balance the number of participants exposed to each of the six possible orderings of treatments.
-275 of the 450 participants answered the eliminatory comprehension questions correctly and completed the experiment.
-Since assignment to treatment happened before participants had gone through the comprehension questions, this leads to slightly different sizes of the subsamples for the six orderings.
-Those who completed the experiment (did not complete the experiment) spent a median time of 12.4 (5.9) minutes and earned 5 (1) UK pounds.\footnote{
-The high median earnings of those who completed the experiment are due to a coding error.
-Instead of decisions in all three treatments being equally likely to be selected for payment, only the Good and the Uniform treatments were selected, \textcolor{red}{with the probabilities indicated in parentheses}. CHECK
-Participants were informed about the error, which increased the payoffs of all participants who had completed the experiment.
-}
 
 \begin{table}[htbp]
 \centering \caption{Characteristics of the estimation sample}\label{tab:sample}
@@ -269,14 +263,45 @@ Standard deviations in parentheses.
 \end{threeparttable}
 \end{table}
 
+Table \ref{tab:sample} in \textcolor{red}{Appendix ...} describes the sample.
+Treatment was assigned in order to balance the number of participants exposed to each of the six possible orderings of treatments.
+275 of the 450 participants answered the eliminatory comprehension questions correctly and completed the experiment.
+Since assignment to treatment happened before participants had gone through the comprehension questions, this leads to slightly different sizes of the subsamples for the six orderings.
+The study had three stages: the eliminatory comprehension questions, the three decisions, and a post-experimental questionnaire.\footnote{
+In the post-experimental questionnaire, respondents answered the following type of questions: an unincentivized question to determine their ambiguity aversion, an adapted cognitive reflection test \citep{Frederick2005,Thomson2016}, a question about the subject they studied for their most recent degree, a general risk taking question \citep{Dohmen2011}, a question about their aspiration level for earnings from participating in a survey, a couple of questions to check their anchoring susceptibility, from which an anchoring score can be computed \citep{Cheek2017}, a set of questions about their optimism/pessimism, the revised Life Orientation Test \citep{Scheier1994} and a brief sensation seeking scale, BSSS-4 \citep{Stephenson2003}.
+}
+Those who completed the experiment (did not complete the experiment) spent a median time of 12.4 (5.9) minutes and earned on average 3.96 (1) UK pounds.\footnote{
+Participants were paid \pounds1 for going through the comprehension questions (regardless of the correctness of their answers).
+Those who answered correctly then earned an additional \pounds1, \pounds2 or \pounds4 for one of their decisions.
 
-Several papers CITE find that when dealing with complex risks, participants in experiments require an extra premium compared to simple risk aversion.
-This premium is positively correlated with ambiguity aversion. (ARE EFFECT size similar?)
+The high average earnings of those who completed the experiment are due to a coding error.
+Instead of decisions in all three treatments being equally likely to be selected, only the Good and the Uniform treatments were selected, each with equal probability.
+This increased the payoffs of all participants who had completed the experiment.
+This error should not have affected decisions, but only which decision was selected for payment.
+Participants were informed about the error after the experiment.
+}
+
 
 
 \section{Hypothesis}\label{sec:hyp}
 Let $p^*$ be the true frequency of the high payoff, whose distribution varies between treatments.
-According to the calculation in \textcolor{red}{Appendix...}, we expect the following ordering of MAPs:
+Since we expect that attitudes towards ambiguity or to complex risk might make participants state different MAPs in the three treatments, we follow \cite{Li2020} and make the following assumptions:
+\begin{itemize}
+\item the utility of outcomes is fixed. We consider $U(\pounds4) = 1$, $U(\pounds1) = 0$, and $U(\pounds2) = 1/3$;\footnote{
+We set the utility of the safe payoff such that $U(\pounds2) = x \times U(\pounds4) + (1-x) \times U(\pounds1)$, where $x \in [0,1]$.
+This leads to $x^* = 1/3$.
+}
+\item participants use a probability weighting function because they perceive the tasks to involve complex risks. Similar to \cite{Li2020a}, we use \citeauthor{Prelec1998}'s (\citeyear{Prelec1998}) \textit{compound invariance} function:
+$$w(p) = (exp(-(-ln(p))^\alpha))^\beta$$ 
+\item we use $\alpha = 0.65$ and $\beta = 1.0467$, which according to \cite{Li2020a} are the most common values for risky probability weighting;
+\item participants use ``forward'' evaluation: they consider the three possible outcomes, and take into account their probabilities;
+\item participants have the following rank-dependent utility function \citep{Schmeidler1989}:
+$$RDU = w(P(\pounds4)) \times 1 + (w(P(\pounds4) + P(\pounds2)) - w(P(\pounds4))) \times (1/3)$$
+where $P(\pounds4)$ is the probability of receiving the high payoff, $P(\pounds2)$ the probability of receiving the safe payoff, and $P(\pounds1)$ the probability of receiving the low payoff.
+\end{itemize}
+
+In this case, the MAPs which maximize participants' utility in the three treatments are: $MAP_G = 7$ ($RDU = 0.628$), $MAP_U = 8$ ($RDU = 0.495$), and $MAP_B = 9$ ($RDU = 0.439$).
+This leads us to expect the following ordering of MAPs:
 
 \noindent \textbf{Hypothesis 1} \quad \textit{The MAP in the Good treatment (more mass on high values of $p^*$) is lower than the MAP in the Uniform treatment (a uniform distribution over $p^*$), which is lower than the MAP in the Bad treatment (more mass on low values of $p^*$).}
 
@@ -284,14 +309,16 @@ According to the calculation in \textcolor{red}{Appendix...}, we expect the foll
 MAP_G < MAP_U < MAP_B
 \end{equation}
 
-In the pre-analysis plan, we specified that the alternative hypothesis ($MAP_B < MAP_U < MAP_G$) could be true instead if participants anchor on visual cues of the distributions, such as the mean.
+We also consider the alternative hypothesis ($MAP_B < MAP_U < MAP_G$), which could be true if instead participants anchor on visual cues of the distributions, such as the mean.
 
 \section{Results}\label{sec:results}
 First, we present summary statistics for all decisions, by treatment and by decision order.
-Next, we run non-parametric tests and ordinary least squares regressions to test the hypothesis.
+Next, we run non-parametric tests and ordinary least squares regressions to test the hypothesis.\footnote{
+We control for order effects in the regressions.
+}
 
 Table \ref{tab:stats} presents the average MAP by treatment over all decisions and by decision order.
-This table already suggests that the hypothesis is not supported by the data, as the average MAP is highest in the Good treatment, followed by the Uniform treatment, followed by the Bad treatment.
+This table already suggests that the hypothesis is not supported by the data, as the average MAP is highest in the Good treatment, followed by the Uniform treatment, followed by the Bad treatment (except for the second decision).
 
 
 \begin{table}[htbp]
@@ -332,24 +359,30 @@ The Stata command is $pagetrend$.
 }
 
 In Table \ref{tab:reg} we present results of ordinary least square regressions of MAPs.
-When referring to sequence order, we abbreviate treatment using initials e.g. we refer to sequence Good--Uniform--Bad as GUB.
+%When referring to sequence order, we abbreviate treatment using initials e.g. we refer to sequence Good--Uniform--Bad as GUB.
 Model (1) contains as regressors only dummy variables indicating the treatment.
 Model (2) adds age and gender as explanatory variables.
 Model (3) additionally includes risk attitudes.
 Model (4) also includes dummy variables for the order in which participants were exposed to treatments.
 In all models, standard errors are clustered at the individual level.
 
-In all four specifications, participants ask for 0.687 more dark blue sectors on average in the Good treatment compared to the Uniform treatment to be willing to spin the selected wheel (p $<$ 0.001 in (4)).
+In all four specifications, participants ask for 0.687 more dark blue sectors on average in the Good treatment compared to the Uniform treatment to be willing to spin the selected wheel (p $<$ 0.001 in all specifications).
 They also ask for 0.229 fewer dark blue sectors in the Bad treatment compared to the Uniform treatment (p = 0.001 in (4)).
 More risk loving individuals have higher MAPs (p = 0.04 in (4)).
-The only sequence order which differs significantly from the baseline is GBU, which has significantly higher MAPs than GUB.
-A closer look shows that this result is due to significantly higher MAPs in GBU relative to GUB in the first decision (not reported).
-Since at that point the sequence of events and information participants faced in the two treatments was identical, we believe this difference is not a treatment effect.
-\textcolor{red}{What do you think of this interpretation?}
+The only sequence order which differs significantly from the baseline (Good--Uniform--Bad) is Good--Bad--Uniform: MAPs are significantly higher than in the baseline.
+A closer look shows that this result is due to significantly higher MAPs the first decision (not reported).
+\textcolor{red}{Here I'm still thinking about it: the number reflects the MAP in the Uniform treatment, but when it comes after Good--Bad as compared to when it comes after Good.}
+Since at that point the sequence of events and information participants faced in the two treatments was identical, this difference  cannot be a treatment effect or an order effect.\footnote{
+In a robustness check, we reran the regressions separately for each ordering.
+The signs of the effects are the same as for the pooled sample, even if some effects do not reach significance in these smaller samples.
+}
 
 \textbf{\textit{Result 1.}} \textit{Participants set the lowest requirement to be willing to take a randomly drawn lottery in the Bad treatment, followed by the Uniform treatment, followed by the Good treatment.}
 
 We speculated that such an ordering of MAPs is possible if individuals anchor on visual cues offered by the distributions.
+If this were true, then the effects should be reduced if we control for the individual anchoring score \citep{Cheek2017} as measured in the post-experimental questionnaire.
+This is however not the case.
+\textcolor{red}{Should I put ``not reported'' or include it somewhere in the appendix?}
 
 
 
@@ -377,15 +410,15 @@ Male                &               &      -0.047   &	0.030   &      -0.029   \\
 Risk attitudes (0--10)&               &               &	-0.172** &      -0.152** \\
 &               &               &	(0.074)   &     (0.074)   \\
 \textit{Sequence} &&&& \\
-\qquad UBG                 &               &               &	&       0.490   \\
+\quad Uniform--Bad--Good                 &               &               &	&       0.490   \\
 &               &               &	&     (0.408)   \\
-\qquad BGU                 &               &               &	&      -0.008   \\
+\quad Bad--Good--Uniform                 &               &               &	&      -0.008   \\
 &               &               &	&     (0.434)   \\
-\qquad GBU                 &               &               &	&       1.173***\\
+\quad Good--Bad--Uniform                 &               &               &	&       1.173***\\
 &               &               &	&     (0.412)   \\
-\qquad BUG                 &               &               &	&      -0.150   \\
+\quad Bad--Uniform--Good                 &               &               &	&      -0.150   \\
 &               &               &	&     (0.434)   \\
-\qquad UGB                 &               &               &	&       0.469   \\
+\quad Uniform--Good--Bad                 &               &               &	&       0.469   \\
 &               &               &	&     (0.433)   \\
 Constant            &       8.844***&       8.696***&	9.520***&       9.066***\\
 &     (0.144)   &     (0.460)   &	(0.593)   &     (0.627)   \\
@@ -396,7 +429,7 @@ N                   &       {825}   &       {825}   &	{825}   &       {825}   \\
 \begin{tablenotes}
 \item \textit{Notes:} Standard errors clustered at the individual level in parentheses.
 The baseline treatment is the Uniform distribution.
-The baseline sequence is GUB (Good--Uniform--Bad).
+The baseline sequence is Good--Uniform--Bad.
 Risk attitudes are measured on a 0--10 scale, where 0 is very risk averse and 10 is very risk loving. \\
 * p $<$ 0.10, ** p $<$ 0.05, *** p $<$ 0.01.
 \end{tablenotes}
