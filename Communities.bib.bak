@@ -92,13 +92,13 @@
 
 @Article{Aimone2015,
   author    = {Jason A. Aimone and Sheryl Ball and Brooks King-Casas},
+  journal   = {{PLoS} {ONE}},
   title     = {The Betrayal Aversion Elicitation Task: An Individual Level Betrayal Aversion Measure},
-  journal   = {{PLOS} {ONE}},
   year      = {2015},
-  volume    = {10},
+  month     = {sep},
   number    = {9},
   pages     = {e0137491},
-  month     = {sep},
+  volume    = {10},
   doi       = {10.1371/journal.pone.0137491},
   editor    = {Daniel Houser},
   publisher = {Public Library of Science ({PLoS})},
@@ -582,10 +582,10 @@
   url      = {https://halshs.archives-ouvertes.fr/halshs-01994021/document},
 }
 
-@TechReport{Polipciuc2020,
+@TechReport{Polipciuc2022motive,
   author = {Maria Polipciuc and Martin Strobel},
   title  = {Betrayal aversion with and without a motive},
-  year   = {2020},
+  year   = {2022},
   type   = {Working paper},
 }
 
@@ -1240,7 +1240,7 @@
 }
 
 @Article{Tymula2016,
-  author    = {Agnieszka Tymula and Eva Woelbert and Paul Glimcher},
+  author    = {Agnieszka Tymula and Eva W\"{o}lbert and Paul Glimcher},
   journal   = {Journal of Neuroscience, Psychology, and Economics},
   title     = {Flexible valuations for consumer goods as measured by the {B}ecker{\textendash}{DeGroot}{\textendash}{M}arschak mechanism.},
   year      = {2016},
@@ -1270,10 +1270,10 @@
   type   = {Personal correspondence},
 }
 
-@TechReport{Polipciuc2021,
+@TechReport{Polipciuc2022inout,
   author = {Maria Polipciuc},
   title  = {Group identity and betrayal: decomposing trust},
-  year   = {2021},
+  year   = {2022},
   type   = {Working paper},
 }
 
@@ -1332,7 +1332,7 @@
 @Article{Wenner2015,
   author    = {Lukas M. Wenner},
   journal   = {European Economic Review},
-  title     = {Expected prices as reference points{\textemdash}Theory and experiments},
+  title     = {Expected prices as reference points{\textemdash}{T}heory and experiments},
   year      = {2015},
   month     = {apr},
   pages     = {60--79},
