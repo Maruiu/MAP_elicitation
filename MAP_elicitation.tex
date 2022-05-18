@@ -34,6 +34,7 @@
 \usepackage{hyphenat}
 \usepackage{listings} % To include a Stata .do file
 \usepackage{pdfpages} % To include the instructions from a pdf file
+\usepackage{tikz}
 \newcommand{\mybox}[2]{{\color{#1}\fbox{\normalcolor#2}}}
 \doublespacing
 
@@ -103,19 +104,26 @@
 
 
 \begin{abstract}
-Betrayal aversion has been shown to be an important determinant of trust \citep{Bohnet2004}.
-Its original identification via Minimum Acceptable Probabilities (MAPs) allows for confounding factors to be mistaken for betrayal aversion \citep{Li2020a}.
+%Betrayal aversion has been shown to be an important determinant of trust \citep{Bohnet2004}.
+%Its original identification via Minimum Acceptable Probabilities (MAPs) allows for confounding factors to be mistaken for betrayal aversion \citep{Li2020a}.
+%
+%%We run an online experiment to estimate the impact of one potential confound: more pessimistic beliefs in the binary trust game compared to the control game.
+%%\textcolor{red}{Participants have to state MAPs for preferring the outcome of a lottery (which will be selected at random from a set of lotteries) to a certain amount.
+%%Across three treatments, the support for the lotteries is the same, but we vary the probability of each lottery to be selected.
+%%--> I am thinking the text in red could be removed.}
+%
+%%We find that MAPs are lowest in the treatment with high mass on ``bad'' lotteries, followed by MAPs in an in-between (uniform) treatment, followed by MAPs in the treatment with high mass on ``good'' lotteries.
+%In an experiment, we find that MAPs are lower the worse the prospects one faces.
+%%The differences run opposite to what we expected: a lower MAP in the uniform as compared to the ``bad'' treatment.
+%Underlying distributions (beliefs about them) influence valuation elicited through MAP, but in the opposite direction to the one we expected.
+%This is similar to the distributional dependence of valuations elicited using the Becker--DeGroot--Marschak mechanism, which closely resembles how MAPs are elicited.
 
-%We run an online experiment to estimate the impact of one potential confound: more pessimistic beliefs in the binary trust game compared to the control game.
-%\textcolor{red}{Participants have to state MAPs for preferring the outcome of a lottery (which will be selected at random from a set of lotteries) to a certain amount.
-%Across three treatments, the support for the lotteries is the same, but we vary the probability of each lottery to be selected.
-%--> I am thinking the text in red could be removed.}
+Betrayal aversion has been shown to be an important determinant of trust (Bohnet and Zeckhauser, 2004).
+We study whether the way betrayal aversion is identified (as a difference in Minimum Acceptable Probabilities, MAPs) is affected by beliefs about one’s prospects.
 
-%We find that MAPs are lowest in the treatment with high mass on ``bad'' lotteries, followed by MAPs in an in-between (uniform) treatment, followed by MAPs in the treatment with high mass on ``good'' lotteries.
-In an experiment, we find that MAPs are lower the worse the prospects one faces.
-%The differences run opposite to what we expected: a lower MAP in the uniform as compared to the ``bad'' treatment.
-Underlying distributions (beliefs about them) influence valuation elicited through MAP, but in the opposite direction to the one we expected.
-This is similar to the distributional dependence of valuations elicited using the Becker--DeGroot--Marschak mechanism, which closely resembles how MAPs are elicited.
+In a within-subject design, we find that MAPs are lower the worse the prospects one faces.
+This is similar to the distributional dependence of valuations elicited using the Becker–DeGroot–Marschak mechanism, of which MAPs are a special case.
+Our results suggest that distributional dependence should be accounted for when eliciting MAPs to isolate betrayal aversion.
 
 \end{abstract}
 \end{titlepage}
@@ -313,6 +321,8 @@ MAP_G < MAP_U < MAP_B
 
 We also consider the alternative hypothesis ($MAP_B < MAP_U < MAP_G$), which could be true if instead participants anchor on visual cues of the distributions, such as the mean.
 
+\textcolor{red}{In Appendix \ref{section:appendixa} we discuss the implications of the assumptions we make in this section.}
+
 \section{Results}\label{sec:results}
 \subsection{The estimation sample}\label{ssec:sample}
 
@@ -362,8 +372,8 @@ Standard deviations in parentheses.
 
 \subsection{Behavior in the experiment} \label{ssec:behavior}
 First, we present summary statistics for all decisions, by treatment and by decision order.
-Next, we run non-parametric tests and ordinary least squares regressions to test the hypothesis.
-$P$-values for non-parametric tests are from two-sided tests.
+Next, we run nonparametric tests and ordinary least squares regressions to test the hypothesis.
+$P$-values for nonparametric tests are from two-sided tests.
 
 Table \ref{tab:stats} presents the average MAP by treatment over all decisions and by decision order.
 This table already suggests that the hypothesis is not supported by the data, as the average MAP is highest in the Good treatment, followed by the Uniform treatment, followed by the Bad treatment (except for the second decision).
@@ -400,7 +410,7 @@ Possible answers were integers between 0 and 15.
 \end{threeparttable}
 \end{table}
 
-A non-parametric Page's L test confirms this: there is strong evidence that the ordering is the opposite to the one hypothesized ($MAP_B < MAP_U < MAP_G$, $p$-value $<$ 0.001).\footnote{
+A nonparametric Page's L test confirms this: there is strong evidence that the ordering is the opposite to the one hypothesized ($MAP_B < MAP_U < MAP_G$, $p$-value $<$ 0.001).\footnote{
 Page's L test has the null hypothesis that all possible orderings are equally likely.
 The alternative hypothesis is that a specified order is the increasing order of alternatives.
 The Stata command is $pagetrend$.
@@ -621,7 +631,7 @@ Alternatively, changing expectations could directly affect consumption utility: 
 With better options overall, the bar to determine which of them increase one's status will be placed higher.
 %Future research could examine which theory best explains the effect of distributional dependence on valuation in this type of context.
 
-We chose the distributions for the treatments such that the overall chance of a high payoff was close to the actual chance in the original studies on betrayal aversion.
+We chose the distributions for the treatments such that the overall chance of a high payoff was close to the probability to reciprocate trust in the original studies on betrayal aversion.
 Further decisions about the Bad (Good) distribution were based on the condition that optimal MAPs be different in the three treatments using the parameters in the toy example of \cite{Li2020a} and additional assumptions.
 Many distributions fit this criterion and our choice at this point was arbitrary.
 Future evidence about how people conceptualize random versus strategic risk and ambiguity could inform experimental designs able to reconcile results from betrayal aversion studies with those on the flexible valuation of risky goods.
@@ -641,5 +651,134 @@ Future evidence about how people conceptualize random versus strategic risk and 
 \pagebreak
 \bibliographystyle{apalike}
 \bibliography{Communities}
+
+\clearpage
+\pagebreak
+
+\appendix
+\section{Theoretical Benchmarks}
+\label{section:appendixa}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\renewcommand{\thefigure}{A.\arabic{figure}}
+\renewcommand{\thetable}{A.\arabic{table}}
+\subsection{The Game}
+
+We analyze an extension of a simple one-player lottery choice.
+The decision maker (DM) decides whether to stay \emph{Out} and receive a safe outcome $s$ or to move \emph{In} and play a lottery which pays a high outcome $h$ with probability $p$ or a low outcome $l$ with probability $1-p$.
+We assume that $l < s < h$. 
+
+The DM does not know $p$ when making his decision.
+What he knows is that $p$ is distributed with density $f(p)$ and has full support on the interval $[0,1]$.
+The DM makes his decision contingent on $p$.
+More precisely, we ask him about his minimum acceptable probability, $MAP$.
+If $p$ happens to be smaller than $MAP$, then DM stays $Out$, otherwise he goes $In$.
+The following figure gives a graphical representation.\footnote{
+For simplicity, we do not explicitly depict the fact that the DM makes a decision contingent on $p$.
+} 
+
+\begin{center}
+	\begin{tikzpicture}[scale=2]
+		\node[right] at (0,2) {~Decision maker};
+		\draw[-, thick] (0,2) -- (-1,1) node[below left] {$s$};
+		\node[left] at (-0.5,1.5) {\emph{Out}~~};
+		\draw [fill] (0,2) circle [radius=0.03];
+		\draw[-, thick] (0,2) -- (1,1) node[right] {~Nature};
+		\node[right] at (0.5,1.5) {~\emph{In}};
+		\draw [fill] (1,1) circle [radius=0.03];
+		\draw[-, thick] (1,1) -- (0,0) node[below left] {$h$};
+		\node[left] at (0.5,0.5) {$p$~~};
+		\draw[-, thick] (1,1) -- (2,0) node[below right] {$l$};
+		\node[right] at (1.5,0.5) {~$1-p$};		
+	\end{tikzpicture}
+\end{center}
+
+In the following we look at different benchmarks.
+In particular, we are interested in whether and how the optimal minimum acceptance probability $MAP^*$ depends on the distribution of $p$.
+
+
+\subsection{Expected Utility Theory}
+\label{subsec:EUT}
+
+Assume the DM to have a utility function $U(\cdot)$. 
+In an expected utility framework, utility is strictly increasing with outcome.
+Hence, we have 
+\begin{align}
+	U(l) < U(s) < U(h)
+\end{align}
+
+The DM wants to choose his $MAP$ such that he maximizes his expected utility $U(MAP)$ which is
+\begin{align}
+	U(MAP) &= \int_{p=0}^{MAP} f(p) \cdot U(s) \, dp %%%
+	+ \int_{p=MAP}^1 f(p) \cdot \left[p \cdot U(h) + (1-p) \cdot U(l) \right] dp \\
+	     &= \int_{p=0}^{MAP} f(p) \cdot U(s) \, dp %%%
+	     - \int_{p=1}^{MAP} f(p) \cdot \left[p \cdot U(h) + (1-p) \cdot U(l) \right] dp 
+\end{align}
+
+We use the Fundamental Theorem of Calculus to derive the first order condition:\footnote{
+We have to say something here about SOC.
+$\frac{\partial U}{\partial MAP} (0) > 0 $ and $\frac{\partial U}{\partial MAP} (1) < 0$ should do the trick.}
+\begin{align}
+	\frac{\partial U(MAP)}{\partial MAP} %%%
+	= f(MAP) \cdot U(s) - f(MAP) \cdot \left[MAP \cdot U(h) + (1-MAP) \cdot U(l) \right] \stackrel{!}{=} 0
+\end{align}
+
+The density function $f(p)$ has full support.
+Therefore, $f(p)$ is positive and we can simplify the expression to 
+\begin{align}
+	MAP^* = \frac{U(s)-U(l)}{U(h)-U(l)}
+\end{align}
+
+The optimal $MAP^*$ is independent of the distribution of $p$.
+Thus, an expected utility maximizer should not be influenced by it. 
+
+
+\subsection{Outcome Based Add-ons}
+
+The result of Section \ref{subsec:EUT} holds if the utility function of the DM is extended by other elements that are based on outcomes.
+For example, the DM might receive extra \mbox{(dis-)} utility from playing the lottery.
+Or he might feel additional happiness or regret in case the outcome of the lottery is the high or the low outcome, respectively.
+Such add-ons lead to a different $MAP^*$, but it remains independent of the distribution of $p$.  
+
+
+\subsection{Probability Weighting}
+
+Experimental evidence shows that humans have difficulties in handling probablities.
+In particular, they seem to overestimate small probabilities.\footnote{
+Some references would be nice here.
+} 
+In the following we assume the DM to have a continuous probability weighting function $w: [0,1] \rightarrow [0,1]$ with $w(0) = 0$ and $w(1) = 1$.
+This gives the DM the following utility function:\footnote{
+Probability weighting is not compatible with the axiomatic framework of expected utility theory.
+We use the notion of utility in a broad sense covering also non-expected utility theories.
+}
+\begin{align}
+	U(MAP) &= \int_{p=0}^{MAP} f(p) \cdot U(s) \, dp %%%
+	+ \int_{p=MAP}^1 f(p) \cdot \left[w(p) \cdot U(h) + w(1-p) \cdot U(l) \right] dp
+\end{align}
+
+This leaves us with 
+\begin{align}
+	\label{eq:FOCsimplified}
+	U(s) - \left[w(MAP) \cdot U(h) + w(1-MAP) \cdot U(l) \right] = 0 
+\end{align}
+
+From the assumptions about the weighting function and $U(l)<U(s)<U(h)$, it follows that this equation has at least one solution (Theorem of Bolzano).
+As in Section \ref{subsec:EUT}, all solutions are independent of the distribution of $p$.\footnote{
+We may get to a unique solution of equation (\ref{eq:FOCsimplified}) if we place additional requirements on the outcomes $U(\cdot)$ and/or on $w(p)$.
+Two possibilities are:
+1.) A unique solution is guaranteed if $w(p)$ is strictly increasing and symmetric, i.e. $w(1-p) = 1-w(p)$ or
+2.) A unique solution is guaranteed if $w(p)$ is strictly increasing and the utility of the low outcome including all possible add-ons is set to zero, i.e. $u(b) = 0$.
+}  
+\footnote{
+In case of multiple solutions we have to address that an individual might jump from one to the other solution depending on the distribution\dots
+}
+	
+
+
+\subsection{Rank Dependent Utility}
+
+Check \cite{Li2020a}.
+
 
 \end{document}
