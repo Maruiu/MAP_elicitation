@@ -10,7 +10,7 @@
 \endinput
 \end{filecontents}
 
-\documentclass[12pt, a4paper]{article}
+\documentclass[pdftex,12pt, a4paper]{article}
 \usepackage{setspace}
 \usepackage{ragged2e}
 \usepackage[centertags,reqno]{amsmath}
@@ -91,7 +91,7 @@
 %\usepackage{preliminary}
 
 \title{Testing the Elicitation Procedure \\ of the Minimum Acceptable Probability}
-\author{Maria Polipciuc\thanks{Maastricht University and Vienna University of Economics and Business. Email: \url{maria.polipciuc@wu.ac.at}.} \and Martin Strobel\thanks{Maastricht University. We thank Elias Tsakas, Mats K\"{o}ster, and participants in the BEELab proposal meeting for valuable comments.}}
+\author{Maria Polipciuc\thanks{Maastricht University and WU Vienna University of Economics and Business. Email: \url{maria.polipciuc@wu.ac.at}.} \and Martin Strobel\thanks{Maastricht University. We thank Elias Tsakas, Mats K\"{o}ster, and participants in the BEELab proposal meeting for valuable comments.}}
 \date{\today	\vspace{1cm}}
 \titlepage
 
@@ -478,8 +478,11 @@ In all four specifications, participants ask for 0.687 more dark blue sectors on
 They also ask for 0.229 fewer dark blue sectors in the Bad treatment compared to the Uniform treatment ($p$-value = 0.001 in (4)).
 More risk loving individuals have lower MAPs ($p$-value = 0.04 in (4)).
 The only sequence order which differs significantly from the baseline (Good--Uniform--Bad) is Good--Bad--Uniform: MAPs are significantly higher than in the baseline.
-The first decision (which is Good in both sequences) differs significantly between these sequences.
+Since the sequence indicators pick up the value in the Uniform treatment, the values for MAPs in the Uniform treatment differ significantly between these two sequences, with the one in Good--Bad--Uniform being significantly higher than the one in Good--Uniform--Bad ($p$-value = 0.004, Mann-Whitney test).
+While we do not have a straightforward explanation for this difference, we notice that the first decision (which is Good in both sequences) already differs significantly between these sequences, with MAP in Good--Bad--Uniform being significantly higher than the one in Good--Uniform--Bad ($p$-value = 0.003, Mann-Whitney test).
 Since at that point the sequence of events and information participants faced in the two treatments was identical, this difference cannot be a treatment effect or an order effect.\footnote{
+\textcolor{red}{Interestingly, it seems that people in GBU and GUB vary in what was the last MAP they ``tried out'' in the practice round, and in the number of clicks in the practice screen. Higher last MAP there (the only one the software records) and more clicks are highly predictive of a higher MAP. Surprisingly, both are negatively corr with RA. Once we control for them, GUB and GBU in the first decision do not differ significantly.
+}
 We used ordinary least squares regressions for ease of interpretation of the coefficients.
 Since the dependent variable is categorical and ordered, we also used ordered logit models (not reported).
 
