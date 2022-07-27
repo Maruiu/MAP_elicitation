@@ -91,7 +91,7 @@
 %\usepackage{preliminary}
 
 \title{Testing the Elicitation Procedure \\ of the Minimum Acceptable Probability}
-\author{Maria Polipciuc\thanks{Maastricht University and WU Vienna University of Economics and Business. Email: \url{maria.polipciuc@wu.ac.at}.} \and Martin Strobel\thanks{Maastricht University. We thank Elias Tsakas, Mats K\"{o}ster, and participants in the BEELab proposal meeting for valuable comments.}}
+\author{Maria Polipciuc\thanks{WU Vienna University of Economics and Business and Maastricht University. Email: \url{maria.polipciuc@wu.ac.at}.} \and Martin Strobel\thanks{Maastricht University. We thank Elias Tsakas, Mats K\"{o}ster, and participants in the BEELab proposal meeting and at the 2022 M-BEES conference for valuable comments.}}
 \date{\today	\vspace{1cm}}
 \titlepage
 
@@ -147,7 +147,7 @@ Then, should the threshold be reached or exceeded, first movers send money, and 
 Should the threshold not be met, the outside option is implemented.
 
 A recent paper has shown theoretically that the elicitation procedure of MAPs used in most papers on betrayal aversion leaves the door open to potential confounds for betrayal aversion such as ``ambiguity attitudes, complexity, different beliefs, and dynamic optimization'' if players are not rational expected utility maximizers \citep{Li2020a}.
-Moreover, a couple of empirical papers which use more stringent identification procedures for betrayal aversion by controlling for beliefs in the two games do not find betrayal aversion (\citeauthor{Fetchenhauer2012}, \citeyear{Fetchenhauer2012}, the second experiment in \citeauthor{Polipciuc2022inout}, \citeyear{Polipciuc2022inout}), or find it to play a role for trusting only when beliefs are far more optimistic than is generally the case \citep{Engelmann2021}.
+Moreover, a couple of empirical papers which use more stringent identification procedures for betrayal aversion by controlling for first mover beliefs in the two games do not find betrayal aversion (\citeauthor{Fetchenhauer2012}, \citeyear{Fetchenhauer2012}, the second experiment in \citeauthor{Polipciuc2022inout}, \citeyear{Polipciuc2022inout}), or find it to play a role for trusting only when beliefs are far more optimistic than is generally the case \citep{Engelmann2021}.
 % Maybe it makes sense to mention the next sentence after describing the similarity with BDM.
 %Several papers CITE find that when dealing with complex risks, participants in experiments require an extra premium compared to simple risk aversion.
 %This premium is positively correlated with ambiguity aversion. (ARE EFFECT size similar?)
@@ -161,7 +161,7 @@ Some refer to such situations as involving ambiguity, others---as involving comp
 Ambiguity aversion and attitudes to complex risks are positively correlated \citep{Armantier2016}.
 In this paper, we refer to the situation as involving complex risk.
 }
-We find the opposite to be true: the higher the expected value of the probability of the favorable outcome, the higher the minimum acceptable probability required by participants to prefer the lottery.
+We find the opposite to be true: the higher the expected probability of the favorable outcome, the higher the minimum acceptable probability required by participants to prefer the lottery.
 
 While this is at odds with our expectations, it ties in with findings from the empirical literature on distributional dependence of willingness to pay (WTP) as elicited through the BDM mechanism.
 Similarly to betrayal aversion, theoretical literature has pointed out that the BDM mechanism is not incentive compatible if players are not rational expected utility maximizers \citep{Karni1987,Horowitz2006}.
@@ -271,7 +271,7 @@ Since the elicitation of MAPs is rather complex \citep{Quercia2016,Polipciuc2022
 The study was pre-registered at the AEA RCT Registry (\url{https://doi.org/10.1257/rct.7776-1.1}).
 
 The study had three stages: a set of eliminatory comprehension questions, the three decisions, and a post-experimental questionnaire.\footnote{
-In the post-experimental questionnaire, respondents answered an unincentivized question to determine their ambiguity aversion, an adapted cognitive reflection test \citep{Frederick2005,Thomson2016}, a question about the subject they studied for their most recent degree, a general risk taking question \citep{Dohmen2011}, a question about their aspiration level for earnings from participating in a survey, a couple of questions to check their anchoring susceptibility, from which an anchoring score can be computed \citep{Cheek2017}, a set of questions about their optimism/pessimism, the revised Life Orientation Test \citep{Scheier1994} and a brief sensation seeking scale, BSSS-4 \citep{Stephenson2003}.
+In the post-experimental questionnaire, respondents answered an unincentivized question to determine their ambiguity aversion, a version of a cognitive reflection test \citep{Frederick2005,Thomson2016} adapted by the authors, a question about the subject they studied for their most recent degree, a general risk taking question \citep{Dohmen2011}, a question about their aspiration level for earnings from participating in a survey, a couple of questions to check their anchoring susceptibility, from which an anchoring score can be computed \citep{Cheek2017}, a set of questions about their optimism/pessimism, the revised Life Orientation Test \citep{Scheier1994} and a brief sensation seeking scale, BSSS-4 \citep{Stephenson2003}.
 }
 Those who completed the experiment (went only through the comprehension questions) spent a median time of 12.4 (5.9) minutes and earned on average 3.96 (1) UK pounds.\footnote{
 Participants were paid \pounds1 for going through the comprehension questions (regardless of the correctness of their answers).
@@ -288,8 +288,9 @@ Participants were informed about the error after the experiment.
 
 
 \section{Hypothesis}\label{sec:hyp}
-Let $p_G$ be the frequency of the high payoff, whose distribution varies between treatments.
-Based on \cite{Li2020a}, we assume that what has been called betrayal aversion could be due to differences in the underlying distribution of $p_G$.
+Let $p$ be the frequency of the high payoff and $1-p$ the frequency of the low payoff of the lottery.
+The distribution of $p$ (and consequently, of $1-p$) varies between treatments.
+Based on \cite{Li2020a} we assume that what has been called betrayal aversion could be due to such differences in the underlying distribution of $p$.
 
 Specifically, we adapt the toy example in Appendix A in \cite{Li2020a} to predict the optimal MAP in each treatment.
 We additionally assume that participants treat complex bets similarly to how they treat ambiguous bets \cite[for supporting evidence, see][]{Armantier2016}.
@@ -297,7 +298,7 @@ This leads us to expect the following ordering of MAPs:\footnote{
 For details, see Appendix \ref{subsec:RDU}.
 }
 
-\noindent \textbf{Hypothesis 1} \quad \textit{The MAP in the Good treatment (more mass on high values of $p_G$) is lower than the MAP in the Uniform treatment (a uniform distribution over $p_G$), which is lower than the MAP in the Bad treatment (more mass on low values of $p_G$).}
+\noindent \textbf{Hypothesis 1} \quad \textit{The MAP in the Good treatment (more mass on high values of $p$) is lower than the MAP in the Uniform treatment (a uniform distribution over $p$), which is lower than the MAP in the Bad treatment (more mass on low values of $p$).}
 
 \begin{equation}
 MAP_G < MAP_U < MAP_B
@@ -410,6 +411,7 @@ In all models, standard errors are clustered at the individual level.
 
 \begin{table}[htbp]
 \centering \caption{Linear regressions on Minimum Acceptable Frequencies}\label{tab:reg}
+\begin{adjustbox}{width=\textwidth}
 \begin{threeparttable}
 \begin{tabular}
    {@{}
@@ -456,16 +458,18 @@ Risk attitudes are measured on a 0--10 scale, where 0 is very risk averse and 10
 * p $<$ 0.10, ** p $<$ 0.05, *** p $<$ 0.01.
 \end{tablenotes}
 \end{threeparttable}
+\end{adjustbox}
 \end{table}
 
-In all four specifications, participants ask for 0.687 more dark blue sectors on average in the Good treatment compared to the Uniform treatment to be willing to spin the selected wheel ($p$-value $<$ 0.001 in all specifications).
+In all four specifications, participants ask for 0.687 more dark blue sectors (yielding a high payoff) on average in the Good treatment compared to the Uniform treatment to be willing to spin the selected wheel ($p$-value $<$ 0.001 in all specifications).
 They also ask for 0.229 fewer dark blue sectors in the Bad treatment compared to the Uniform treatment ($p$-value = 0.001 in (4)).
 More risk loving individuals have lower MAPs ($p$-value = 0.04 in (4)).
+
 The only sequence order which differs significantly from the baseline (Good--Uniform--Bad) is Good--Bad--Uniform: MAPs are significantly higher than in the baseline.
 Since the sequence indicators pick up the value in the Uniform treatment, the values for MAPs in the Uniform treatment differ significantly between these two sequences, with the one in Good--Bad--Uniform being significantly higher than the one in Good--Uniform--Bad ($p$-value = 0.004, Mann-Whitney test).
 While we do not have a straightforward explanation for this difference, we notice that the first decision (which is Good in both sequences) already differs significantly between these sequences, with MAP in Good--Bad--Uniform being significantly higher than the one in Good--Uniform--Bad ($p$-value = 0.003, Mann-Whitney test).
 Since at that point the sequence of events and information participants faced in the two treatments was identical, this difference cannot be a treatment effect or an order effect.\footnote{
-\textcolor{red}{Interestingly, it seems that people in GBU and GUB vary in what was the last MAP they ``tried out'' in the practice round, and in the number of clicks in the practice screen. Higher last MAP there (the only one the software records) and more clicks are highly predictive of a higher MAP. Surprisingly, both are negatively corr with RA. Once we control for them, GUB and GBU in the first decision do not differ significantly.
+\textcolor{red}{Interestingly, it seems that people in GBU and GUB vary in what was the last MAP they ``tried out'' in the practice round, and in the number of clicks in the practice screen. Higher last MAP there (the only one the software records) and more clicks are highly predictive of a higher MAP.
 }
 We used ordinary least squares regressions for ease of interpretation of the coefficients.
 Since the dependent variable is categorical and ordered, we also used ordered logit models (not reported).
@@ -478,13 +482,13 @@ The signs of the effects are the same for each ordering as for the pooled sample
 
 \textbf{\textit{Result 1.}} \textit{Participants set the lowest requirement to be willing to take a randomly drawn lottery in the Bad treatment, followed by the Uniform treatment, followed by the Good treatment.}
 
-Subjects' MAPs are stickier if they start with the Good treatment than with the other two: the intra-individual standard deviation over all three MAPs is lower if the first decision is in the Good treatment than if it is in one of the other two treatments (ranksum test, $p$-value = 0.02).
+Subjects' MAPs are stickier if they start with the Good treatment than with the other two: the intra-individual standard deviation over all three MAPs is lower if the first decision is in the Good treatment than if it is in one of the other two treatments (Mann-Whitney test, $p$-value = 0.02).
 Table \ref{tab:first} shows the results of running specifications (1)--(3) in Table \ref{tab:reg} on first decisions only.
 Since the skewed effect of stickiness is not present, deviations in MAP in the Good and in the Bad treatment do not differ in absolute size (Wald test for equality of coefficients in (3), $p$-value = 0.87).
 The smaller coefficient in the Bad treatment over all three decisions is thus due to more pronounced stickiness when facing prospects that worsen than when facing prospects that improve over time.
 
 \begin{table}[htbp]
-\centering \caption{Linear regressions on Minimum Acceptable Frequencies: first decisions}\label{tab:first}
+\centering \caption{Linear regressions on Minimum Acceptable Frequencies: first decision}\label{tab:first}
 \begin{threeparttable}
 \begin{tabular}
    {@{}
@@ -504,7 +508,7 @@ Age                 &               &       0.018   &       0.019   \\
                     &               &     (0.015)   &     (0.015)   \\
 Male                &               &      -0.194   &      -0.113   \\
                     &               &     (0.303)   &     (0.303)   \\
-Risk aversion (0--10)&               &               &      -0.174** \\
+Risk attitudes (0--10)&               &               &      -0.174** \\
                     &               &               &     (0.076)   \\
 Constant            &       8.890***&       8.333***&       9.189***\\
                     &     (0.253)   &     (0.573)   &     (0.680)   \\
@@ -533,12 +537,11 @@ We thank Mats K\"{o}ster for this suggestion.
 Should this be the case, the ordering of MAPs would coincide with the one we observe for a mechanical reason.
 In order to test this, we rerun the specifications in Table \ref{tab:reg}, but we use as dependent variable the number of wheels which, if randomly selected, are relevant for the participant's payoff.
 In other words, this is the number of wheels which---given the participant's MAP---would be spun if selected.
-We consider this assumption to be supported if either (i) treatment does not influence the number of wheels potentially spun and this number is close to 16 in all treatments (half of the 32 wheels available) or (ii) treatment  influences significantly the number of wheels potentially spun, but the coefficients of the treatment variables are small in a ``real-world'' sense.\footnote{
-The results are similar for the sample of first decisions only.
-}
+We consider this assumption to be supported if either (i) treatment does not influence the number of wheels potentially spun and this number is close to 16 in all treatments (half of the 32 wheels available) or (ii) treatment  influences significantly the number of wheels potentially spun, but the coefficients of the treatment variables are small in a ``real-world'' sense.
 
 \begin{table}[htbp]
 \centering \caption{Linear regressions on wheels potentially spun for payoff}\label{tab:wheels}
+\begin{adjustbox}{width=\textwidth}
 \begin{threeparttable}
 \begin{tabular}
    {@{}
@@ -576,7 +579,6 @@ Constant            &      14.313***&      14.539***&      13.380***&      14.15
 \midrule
 N                   &       {825}   &       {825}   &       {825}   &       {825}   \\
 \bottomrule
-
 \end{tabular}
 \begin{tablenotes}
 \item \textit{Notes:} Standard errors clustered at the individual level in parentheses.
@@ -586,12 +588,15 @@ Risk attitudes are measured on a 0--10 scale, where 0 is very risk averse and 10
 * p $<$ 0.10, ** p $<$ 0.05, *** p $<$ 0.01.
 \end{tablenotes}
 \end{threeparttable}
+\end{adjustbox}
 \end{table}
 
 Table \ref{tab:wheels} shows that in the Uniform treatment, approximately 14 wheels are potentially spun for payoff on average.
 While this is close to the expected 16 wheels, the numbers vary significantly both in size and magnitude for the other two treatments.
 In the Good treatment, subjects are willing to spin approximately 7.4 more wheels---the equivalent of an additional row of wheels.
-In the Bad treatment, subjects are willing to spin approximately 6.8 fewer wheels.
+In the Bad treatment, subjects are willing to spin approximately 6.8 fewer wheels.\footnote{
+The results are similar for the sample of first decisions only.
+}
 We conclude that while there is a potential ``pull towards the visual center'' effect, it cannot explain the results.
 
 \section{Discussion}\label{sec:discussion}
@@ -618,8 +623,8 @@ Alternatively, changing expectations could directly affect consumption utility: 
 With better options overall, the bar to determine which of them increase one's status will be placed higher.
 %Future research could examine which theory best explains the effect of distributional dependence on valuation in this type of context.
 
-We chose the distributions for the treatments such that the overall chance of a high payoff was close to the probability to reciprocate trust in the original studies on betrayal aversion.
-Further decisions about the Bad (Good) distribution were based on the condition that optimal MAPs be different in the three treatments using the parameters in the toy example of \cite{Li2020a} and additional assumptions.
+We chose the distributions for the treatments such that the overall chance of a high payoff was close to the probability of trustworthiness in the original studies on betrayal aversion.
+Further decisions about the Bad (Good) distribution were based on the condition that optimal MAPs be different in the three treatments using the parameters in the toy example of \cite{Li2020a} and additional assumptions detailed in Appendix \ref{subsec:RDU}.
 Many distributions fit this criterion and our choice at this point was arbitrary.
 Future evidence about how people conceptualize random versus strategic risk and ambiguity could inform experimental designs able to reconcile results from betrayal aversion studies with those on the flexible valuation of risky goods.
 
@@ -703,15 +708,15 @@ The DM wants to choose his $MAP$ such that he maximizes his expected utility $U(
 \end{align}
 
 We use the Fundamental Theorem of Calculus to derive the first order condition:\footnote{
-We have to say something here about SOC.
-$\frac{\partial U}{\partial MAP} (0) > 0 $ and $\frac{\partial U}{\partial MAP} (1) < 0$ should do the trick.}
+\textcolor{red}{We have to say something here about SOC. -- Is it enough to say that for $p=0$, $U(Out)>U(In) <=> U(s)>U(h)*0+U(l)*1 <=> U(s)>U(l)$ so $MAP^*=1$ and for $p=1$, $U(In)>U(Out) <=> U(h)*1+U(l)*0>U(s) <=> U(h)>U(s)$ so $MAP^*=0$. $U(Out)$ does not depend on $p$ and $U(In)$ monotonically increases in $p$, so for some unique $p \in (0,1)$, $U(In)$ crosses $U(Out)$. Then we wouldn't have to characterize the derivative in blue below anymore (or am I missing something)?}
+\textcolor{blue}{$\frac{\partial U(MAP)}{\partial MAP} (0) > 0 $ and $\frac{\partial U(MAP)}{\partial MAP} (1) < 0$ should do the trick.}}
 \begin{align}
 	\frac{\partial U(MAP)}{\partial MAP} %%%
 	= f(MAP) \cdot U(s) - f(MAP) \cdot \left[MAP \cdot U(h) + (1-MAP) \cdot U(l) \right] \stackrel{!}{=} 0
 \end{align}
 
 The density function $f(p)$ has full support.
-Therefore, $f(p)$ is positive and we can simplify the expression to 
+Therefore, $f(MAP)$ is positive and we can simplify the expression to 
 \begin{align}
 	MAP^* = \frac{U(s)-U(l)}{U(h)-U(l)}
 \end{align}
@@ -724,20 +729,21 @@ Thus, an expected utility maximizer should not be influenced by it.
 
 The result of Section \ref{subsec:EUT} holds if the utility function of the DM is extended by other elements that are based on outcomes.
 For example, the DM might receive extra \mbox{(dis-)} utility from playing the lottery.
-Or he might feel additional happiness or regret in case the outcome of the lottery is the high or the low outcome, respectively.
-Such add-ons lead to a different $MAP^*$, but it remains independent of the distribution of $p$.  
+Or he might feel additional happiness or regret in case the outcome of the lottery is high or low, respectively.
+Such add-ons lead to a different $MAP^*$, but do not change the fact that it is independent of the distribution of $p$.  
 
 
 \subsection{Probability Weighting}
 
 Experimental evidence shows that humans have difficulties in handling probablities.
-In particular, they seem to overestimate small probabilities.\footnote{
-Some references would be nice here.
+In particular, they seem to overestimate small probabilities and underestimate large ones.\footnote{
+Back in 2000, \citet[p.~348--349]{Starmer2000} mentioned research spanning 50 years which supports this.
+This still holds true today, e.g. see \citet[Figure 4 on p.~276]{Li2020a}.  
 } 
 In the following we assume the DM to have a continuous probability weighting function $w: [0,1] \rightarrow [0,1]$ with $w(0) = 0$ and $w(1) = 1$.
 This gives the DM the following utility function:\footnote{
 Probability weighting is not compatible with the axiomatic framework of expected utility theory.
-We use the notion of utility in a broad sense covering also non-expected utility theories.
+We use the notion of utility in a broad sense covering also non-expected utility theories \textcolor{red}{which use decision weights}.
 }
 \begin{align}
 	U(MAP) &= \int_{p=0}^{MAP} f(p) \cdot U(s) \, dp %%%
@@ -755,19 +761,22 @@ As in Section \ref{subsec:EUT}, all solutions are independent of the distributio
 We may get to a unique solution of equation (\ref{eq:FOCsimplified}) if we place additional requirements on the outcomes $U(\cdot)$ and/or on $w(p)$.
 Two possibilities are:
 1.) A unique solution is guaranteed if $w(p)$ is strictly increasing and symmetric, i.e. $w(1-p) = 1-w(p)$ or
-2.) A unique solution is guaranteed if $w(p)$ is strictly increasing and the utility of the low outcome including all possible add-ons is set to zero, i.e. $u(b) = 0$.
-}  
+2.) A unique solution is guaranteed if $w(p)$ is strictly increasing and the utility of the low outcome including all possible add-ons is set to zero, i.e. $U(l) = 0$.
+}\textsuperscript{,} 
 \footnote{
-In case of multiple solutions we have to address that an individual might jump from one to the other solution depending on the distribution\dots
+In case of multiple solutions, we assume the distribution of $p$ does not offer cues which lead to selecting a different optimum MAP in each treatment.
 }
 	
 
 
 \subsection{Rank Dependent Utility}
 \label{subsec:RDU}
+%Let $p^*$ be the frequency of the high payoff, whose distribution varies between treatments.
+%Since we expect that attitudes towards complex risk might make participants state different MAPs in the three treatments, we adapt the toy example in \cite{Li2020a} and make the following assumptions:
+In this section, we present the assumptions we made in order to derive the hypothesis.
+Unlike in the previous appendices, we focus on a numerical calculation.
 
-Let $p^*$ be the frequency of the high payoff, whose distribution varies between treatments.
-Since we expect that attitudes towards complex risk might make participants state different MAPs in the three treatments, we adapt the toy example in \cite{Li2020a} and make the following assumptions:
+We adapt the toy example in \cite{Li2020a} and make the following assumptions:
 \begin{itemize}
 \item the utility of outcomes is fixed. We consider $U(high) = U(\pounds4) = 1$, $U(low) = U(\pounds1) = 0$, and $U(safe) = U(\pounds2) = 1/3$;\footnote{
 We set the utility of the safe payoff such that $U(high) > U(safe) > U(low)$.
@@ -785,7 +794,7 @@ $$w(p) = (exp(-(-ln(p))^\alpha))^\beta$$
 \item participants use ``forward'' evaluation: they consider the three possible outcomes and take into account their probabilities, as resulting from the probability weighting function above;
 \item participants have the following rank-dependent utility function \citep{Schmeidler1989}, in which an act generated by a choice of MAP leads to:
 $$RDU = w(P(\pounds4)) \times 1 + (w(P(\pounds4) + P(\pounds2)) - w(P(\pounds4))) \times (1/3)$$
-where $P(\pounds4)$ is the probability of receiving the high payoff, $P(\pounds2)$ the probability of receiving the safe payoff, and $P(\pounds1)$ the probability of receiving the low payoff (which does not appear in the utility function, as the utility of the low payoff is considered to be 0).
+where $P(\pounds4)$ is the probability of receiving the high payoff for a ceratin MAP in the respective treatment, $P(\pounds2)$ the probability of receiving the safe payoff, and $P(\pounds1)$ the probability of receiving the low payoff (which does not appear in the utility function, as the utility of the low payoff is considered to be 0).
 \end{itemize}
 
 In this case, the MAPs which maximize participants' utility in the three treatments are: $MAP_G = 7$ ($RDU = 0.628$), $MAP_U = 8$ ($RDU = 0.495$), and $MAP_B = 9$ ($RDU = 0.439$).
