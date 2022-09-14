@@ -91,7 +91,7 @@
 %\usepackage{preliminary}
 
 \title{Testing the Elicitation Procedure \\ of the Minimum Acceptable Probability}
-\author{Maria Polipciuc\thanks{WU Vienna University of Economics and Business and Maastricht University. Email: \url{maria.polipciuc@wu.ac.at}.} \and Martin Strobel\thanks{Maastricht University. We thank Elias Tsakas, Mats K\"{o}ster, and participants in the BEELab proposal meeting and those at the 2022 M-BEES and 2022 European ESA conferences for valuable comments.}}
+\author{Maria Polipciuc\thanks{WU Vienna University of Economics and Business and Maastricht University. Email: \url{maria.polipciuc@wu.ac.at}.} \and Martin Strobel\thanks{Maastricht University. We thank Elias Tsakas, Mats K\"{o}ster, Andrea Isoni and participants in the BEELab proposal meeting and those at the 2022 M-BEES and 2022 European ESA conferences for valuable comments.}}
 \date{\today	\vspace{1cm}}
 \titlepage
 
@@ -607,6 +607,15 @@ The results are similar for the sample of first decisions.
 }
 We conclude that while there is a potential ``pull towards the visual center'' effect, it cannot explain the results.
 
+Another suggestion was that our results could be explained by the range-frequency theory \citep{Parducci1965,Parducci1971}.\footnote{
+We thank Andrea Isoni for this suggestion.
+}
+This theory states that when presented with stimuli (physical, such as sounds or weights, but also monetary rewards), participants bin the stimuli into categories depending on the available range of stimuli and on their frequency.
+Participants do this as a compromise between (i) dividing the available range into equal shares and (ii) ensuring that each bin has an equal share of stimuli.
+If participants consider that only certain categories are acceptable risks, this can lead to the MAP ordering observed in our data.
+We provide a numerical example of such a rationale in Appendix \ref{section:appendixb}.
+
+
 \section{Discussion}\label{sec:discussion}
 In this note, we test a necessary assumption for the way betrayal aversion has been elicited in the past to be incentive compatible.
 This assumption is that the underlying distributions of probabilities of outcomes in two treatments which are contrasted to isolate betrayal aversion do not influence behavior.
@@ -624,13 +633,18 @@ We find a difference in behavior between treatments, but of the opposite sign to
 We thus find a distributional dependence of risk attitudes as elicited using MAPs, but of the opposite sign than the predictions of the toy example in \cite{Li2020a}.
 This result implies that betrayal aversion should be identified after controlling for subjective beliefs.
 
-The result is consistent with theories of reference-dependent preferences which predict that individuals will be more risk loving when endowed with more risky options.
+The result is consistent with several theories.
+A first type of such theories are theories of reference-dependent preferences which predict that individuals will be more risk loving when endowed with more risky options.
 Since our experiment was not meant to disentangle between competing theories, several of them could explain our results---for instance, the one in \cite{Koszegi2006,Koszegi2007} or the one of \cite{Wenner2015}.
 These theories state that expectations (which we manipulated exogenously by changing the underlying distribution of lotteries) act as reference points.
 Modifying expectations modifies the gain-loss component of the utility function, such that higher expectations may make the same outcome less desirable.
 Alternatively, changing expectations could directly affect consumption utility: if one derives self-image utility from one's consumption, a change in expectations could change which goods are more desirable and thus, which ones offer a boost in self-image for the owner \citep{Strahilevitz1998,Marzilli2011}.
 With better options overall, the bar to determine which of them increase one's status will be placed higher.
 %Future research could examine which theory best explains the effect of distributional dependence on valuation in this type of context.
+A second theory which could explain the result is the range-frequency model \citep{Parducci1965,Parducci1971}.
+This theory explicitly considers that when evaluating the intensity of a stimulus, participants take into account both the range and the frequency of available stimuli.
+By changing the frequency, as we do in the treatments, one changes the components of the categories construed by the participant.
+If only certain categories are deemed acceptable (e.g. risks worth taking), this can affect decisions in a way which aligns with the results.
 
 We chose the distributions for the treatments such that the overall chance of a high payoff was close to the probability of trustworthiness in the original studies on betrayal aversion.
 Further decisions about the Bad (Good) distribution were based on the condition that optimal MAPs be different in the three treatments using the parameters in the toy example of \cite{Li2020a} and additional assumptions detailed in Appendix \ref{subsec:RDU}.
@@ -810,6 +824,60 @@ where $P(\pounds4)$ is the probability of receiving the high payoff for a cerati
 \end{itemize}
 
 In this case, the MAPs which maximize participants' utility in the three treatments are: MAP\textsubscript{G} = 7 ($RDU = 0.628$), MAP\textsubscript{U} = 8 ($RDU = 0.495$), and MAP\textsubscript{B} = 9 ($RDU = 0.439$).
+
+\section{Range-frequency model: a numerical example}
+\label{section:appendixb}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\renewcommand{\thefigure}{B.\arabic{figure}}
+\renewcommand{\thetable}{B.\arabic{table}}
+According to the range-frequency model, participants categorize stimuli according to range and frequency, and then evaluate them based on a compromise between the two ways of classification.
+
+Let us assume that a participant uses four bins to categorize stimuli: bad lotteries, not OK lotteries, OK lotteries, and good lotteries.
+When using the range criterion, this participant bins existing lotteries in all treatments in the following way:
+\begin{center}
+\begin{tabular}{p{3cm} c}
+Category & Dark blue sectors \\
+\hline
+Bad & 0, 1, 2, 3\\
+Not OK & 4, 5, 6, 7\\
+OK & 8, 9, 10, 11\\
+Good & 12, 13, 14, 15\\
+\hline
+\end{tabular}
+\end{center}
+
+If she bins lotteries according to frequency, she arrives at the following division in each treatment:
+\begin{center}
+\begin{tabular}{p{3cm} c}
+Category & Dark blue sectors \\
+\hline
+& The Good \\
+\cmidrule{2-2}
+Bad & 0, 1, 2, 3, 4, 5, 6, 7\\
+Not OK & 8, 9, 10, 11, 12\\
+OK & 13, 14\\
+Good & 15\\
+\cmidrule{2-2}
+& The Uniform \\
+\cmidrule{2-2}
+Bad & 0, 1, 2, 3\\
+Not OK & 4, 5, 6, 7\\
+OK & 8, 9, 10, 11\\
+Good & 12, 13, 14, 15\\
+\cmidrule{2-2}
+& The bad \\
+\cmidrule{2-2}
+Bad & 0\\
+Not OK & 1, 2\\
+OK & 3, 4, 5, 6, 7\\
+Good & 8, 9, 10, 11, 12, 13, 14, 15\\
+\hline
+\end{tabular}
+\end{center}
+
+If she thinks only categories OK and Good are acceptable and compromises between the two divisions of stimuli, she could report the following MAPs: MAP\textsubscript{G} = 10.5, MAP\textsubscript{U} = 8, MAP\textsubscript{B} = 5.5.
+As she gives more weight to the frequency criterion, choices get closer to one another.
 
 
 \end{document}
