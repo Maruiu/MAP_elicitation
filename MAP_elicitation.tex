@@ -409,6 +409,19 @@ The alternative hypothesis is that a specified order is the increasing order of 
 The Stata command is $pagetrend$.
 }
 
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{MeanMAPs_nice.pdf}}
+	\caption{Mean MAPs by treatment and sequence}
+	\label{fig:MeanMAPs}
+\end{figure}
+
+Figure \ref{fig:MeanMAPs} shows that this ordering of MAPs holds for all six sequences.
+One sequence stands out: Good--Bad--Uniform.
+For each treatment, MAPs in this sequence are higher than in any other sequence.
+Even in the first decision, the MAP in \textbf{Good}--Bad--Uniform differs significantly from its counterpart in \textbf{Good}--Uniform--Bad ($p$-value = 0.003, Mann-Whitney test).
+Since the sequence of events and the information participants faced up to that point in the two treatments had been identical, this difference cannot be a treatment effect, nor an order effect.
+
 In Table \ref{tab:reg} we present results of ordinary least square regressions of MAPs.
 %When referring to sequence order, we abbreviate treatment using initials e.g. we refer to sequence Good--Uniform--Bad as GUB.
 Model (1) contains as regressors only dummy variables indicating the treatment.
@@ -428,40 +441,40 @@ In all models, standard errors are clustered at the individual level.
 	@{}
 	}
 \toprule
-\textbf{Dependent variable:}& \multicolumn{4}{c}{Minimum	acceptable frequency}\\
+\textbf{Dependent variable:}& \multicolumn{4}{c}{Minimum acceptable frequency}\\
 &       {(1)}   &       {(2)}   &	{(3)}   &       {(4)}   \\
+
 \cmidrule(rl){2-5}
-The Good            &       0.687***&       0.687***&	0.687***&       0.687***\\
-&     (0.099)   &     (0.099)   &	(0.099)   &     (0.099)   \\
-The Bad             &      -0.229***&      -0.229***&	-0.229***&      -0.229***\\
-&     (0.070)   &     (0.070)   &	(0.070)   &     (0.070)   \\
-Age                 &               &       0.005   &	0.006   &       0.006   \\
-&               &     (0.013)   &	(0.013)   &     (0.014)   \\
-Male                &               &      -0.047   &	0.030   &      -0.029   \\
-&               &     (0.286)   &	(0.284)   &     (0.283)   \\
-Risk attitudes (0--10)&               &               &	-0.172** &      -0.152** \\
-&               &               &	(0.074)   &     (0.074)   \\
-\textit{Sequence} &&&& \\
-\quad Uniform--Bad--Good                 &               &               &	&       0.490   \\
-&               &               &	&     (0.408)   \\
-\quad Bad--Good--Uniform                 &               &               &	&      -0.008   \\
-&               &               &	&     (0.434)   \\
-\quad Good--Bad--Uniform                 &               &               &	&       1.173***\\
-&               &               &	&     (0.412)   \\
-\quad Bad--Uniform--Good                 &               &               &	&      -0.150   \\
-&               &               &	&     (0.434)   \\
-\quad Uniform--Good--Bad                 &               &               &	&       0.469   \\
-&               &               &	&     (0.433)   \\
-Constant            &       8.844***&       8.696***&	9.520***&       9.066***\\
-&     (0.144)   &     (0.460)   &	(0.593)   &     (0.627)   \\
+The Good            &	0.687***&	0.687***&	0.687***&	0.687***\\
+&	(0.099)   &	(0.099)   &	(0.099)   &	(0.099)   \\
+The Bad             &	-0.229***&	-0.229***&	-0.229***&	-0.229***\\
+&	(0.070)   &	(0.070)   &	(0.070)   &	(0.070)   \\
+Age                 &	&	0.005   &	0.006   &	0.006   \\
+&	&	(0.013)   &	(0.013)   &	(0.014)   \\
+Male                &	&	-0.047   &	0.030   &	-0.029   \\
+&	&	(0.286)   &	(0.284)   &	(0.283)   \\
+Risk aversion (0--10)&	&	&	-0.172** &	-0.152** \\
+&	&	&	(0.074)   &	(0.074)   \\
+Good--Uniform--Bad  &	&	&	&	-0.490   \\
+&	&	&	&	(0.408)   \\
+Bad--Good--Uniform  &	&	&	&	-0.497   \\
+&	&	&	&	(0.475)   \\
+Good--Bad--Uniform  &	&	&	&	0.683   \\
+&	&	&	&	(0.461)   \\
+Bad--Uniform--Good  &	&	&	&	-0.640   \\
+&	&	&	&	(0.491)   \\
+Uniform--Good--Bad  &	&	&	&	-0.020   \\
+&	&	&	&	(0.489)   \\
+Constant            &	8.844***&	8.696***&	9.520***&	9.556***\\
+&	(0.144)   &	(0.460)   &	(0.593)   &	(0.696)   \\
 \midrule
-N                   &       {825}   &       {825}   &	{825}   &       {825}   \\
+N                   &	{825}   &	{825}   &	{825}   &	{825}   \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}
 \item \textit{Notes:} Standard errors clustered at the individual level in parentheses.
 The baseline treatment is the Uniform distribution.
-The baseline sequence is Good--Uniform--Bad.
+The baseline sequence is Uniform--Good--Bad.
 Risk attitudes are measured on a 0--10 scale, where 0 is very risk averse and 10 is very risk loving. \\
 * p $<$ 0.10, ** p $<$ 0.05, *** p $<$ 0.01.
 
@@ -472,21 +485,21 @@ This is also true for the standard errors.
 \end{adjustbox}
 \end{table}
 
-In all four specifications, participants ask on average for 0.687 more dark blue sectors (yielding a high payoff) in Good compared to Uniform to be willing to spin the selected wheel ($p$-value $<$ 0.001 in all specifications).
+In all four specifications, participants ask for 0.687 more dark blue sectors (yielding a high payoff) on average in Good compared to Uniform to be willing to spin the selected wheel ($p$-value $<$ 0.001 in all specifications).
 They also ask for 0.229 fewer dark blue sectors in Bad compared to Uniform ($p$-value = 0.001 in (4)).
-More risk loving individuals have lower MAPs ($p$-value = 0.04 in (4)).
-
-The only sequence order which differs significantly from the baseline (Good--Uniform--Bad) is Good--Bad--Uniform: MAPs are significantly higher than in the baseline.
-Since the sequence indicators pick up the value in Uniform, the values for MAPs in Uniform differ significantly between these two sequences, with the one in Good--Bad--Uniform being significantly higher than the one in Good--Uniform--Bad ($p$-value = 0.004, Mann-Whitney test).
-While we do not have a straightforward explanation for this difference, we notice that the first decision (which is Good in both sequences) already differs significantly between these sequences, with MAP in Good--Bad--Uniform being significantly higher than the one in Good--Uniform--Bad ($p$-value = 0.003, Mann-Whitney test).
-Since at that point the sequence of events and information participants faced in the two treatments was identical, this difference cannot be a treatment effect or an order effect.\footnote{
-We used ordinary least squares regressions for ease of interpretation of the coefficients.
-Since the dependent variable is categorical and ordered, we also used ordered logit models.
-The results are qualitatively similar.
-Compared to Uniform, MAPs between 1 and 8 are less likely in Good (more likely in Bad) and MAPs between 9 and 15 are more likely in Good (less likely in Bad).
+More risk loving individuals have lower MAPs ($p$-value = 0.04 in (4)).\footnote{
+	We used ordinary least squares regressions for ease of interpretation of the coefficients.
+	Since the dependent variable is categorical and ordered, we also used ordered logit models.
+	The results are qualitatively similar.
+	Compared to Uniform, MAPs between 1 and 8 are less likely in Good (more likely in Bad) and MAPs between 9 and 15 are more likely in Good (less likely in Bad).
 }\textsuperscript{,}\footnote{
-In a robustness check, we reran the regressions separately for each ordering.
-The signs of the effects are the same for each ordering as for the pooled sample, even if some effects do not reach significance in these smaller samples.
+	In a robustness check, we reran the regressions separately for each ordering.
+	The signs of the effects are the same for each ordering as they are in the pooled sample, though some effects do not reach significance in these smaller samples.
+}\textsuperscript{,}\footnote{
+The coefficient of the sequence which stands out in Figure \ref{fig:MeanMAPs}, Good--Bad--Uniform, is not significant with the baseline treatment and sequence in model (4).
+We also ran a contrast analysis after this regression, to check how the coefficients of each sequence differ from the grand mean.
+Even after using a Bonferroni correction, the coefficient of this sequence is the only one which is significantly higher than the grand mean.
+As mentioned before, this is a particularity of the data which cannot be attributed to treatment effects, nor to order effects.
 }
 
 \textbf{\textit{Result 1.}} \textit{Participants set the lowest requirement to be willing to take a randomly drawn lottery in Bad, followed by Uniform, followed by Good.}
