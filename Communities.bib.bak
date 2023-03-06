@@ -1364,4 +1364,17 @@
   volume  = {72},
 }
 
+@Article{Parducci1971,
+  author    = {Allen Parducci and Linda F. Perrett},
+  journal   = {Journal of Experimental Psychology},
+  title     = {Category rating scales: Effects of relative spacing and frequency of stimulus values.},
+  year      = {1971},
+  month     = {aug},
+  number    = {2},
+  pages     = {427--452},
+  volume    = {89},
+  doi       = {10.1037/h0031258},
+  publisher = {American Psychological Association ({APA})},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -26,6 +26,8 @@
 \usepackage[showframe=false]{geometry}
 \usepackage{changepage}
 \usepackage{xcolor}
+\definecolor{LightBlue}{rgb}{0.902, 0.945, 1}
+\usepackage{mdframed}
 \usepackage{eurosym}
 \usepackage{textcomp}
 \usepackage[open,openlevel=1]{bookmark}
@@ -37,6 +39,10 @@
 \usepackage{tikz}
 \newcommand{\mybox}[2]{{\color{#1}\fbox{\normalcolor#2}}}
 \doublespacing
+
+\usepackage{wasysym} % For radio buttons
+\usepackage{tasks} % For items side by side, aligned in pairs
+\usepackage{makecell} % Splits long text in table cell
 
 
 
@@ -90,8 +96,8 @@
 %Adds text specifying it is a preliminary version
 %\usepackage{preliminary}
 
-\title{Testing the Elicitation Procedure \\ of the Minimum Acceptable Probability}
-\author{Maria Polipciuc\thanks{WU Vienna University of Economics and Business and Maastricht University. Email: \url{maria.polipciuc@wu.ac.at}.} \and Martin Strobel\thanks{Maastricht University. We thank Elias Tsakas, Mats K\"{o}ster, Andrea Isoni and participants at the BEELab proposal meeting and the interdisciplinary brownbag seminar of behavioral sciences at Maastricht University, and at the 2022 M-BEES and 2022 European ESA conferences for valuable comments.}}
+\title{Testing the elicitation procedure \\ of the Minimum Acceptable Probability}
+\author{Maria Polipciuc\thanks{WU Vienna University of Economics and Business and Maastricht University. Email: \url{maria.polipciuc@wu.ac.at}.} \and Martin Strobel\thanks{Maastricht University. We thank Elias Tsakas, Mats K\"{o}ster, Andrea Isoni and participants at the BEELab proposal meeting and the interdisciplinary brownbag seminar of behavioral sciences at Maastricht University, the 2022 M-BEES and the 2022 European ESA conferences, and the fall 2022 Berlin Behavioral Economics Workshop for valuable comments.}}
 \date{\today	\vspace{1cm}}
 \titlepage
 
@@ -118,12 +124,16 @@
 %Underlying distributions (beliefs about them) influence valuation elicited through MAP, but in the opposite direction to the one we expected.
 %This is similar to the distributional dependence of valuations elicited using the Becker--DeGroot--Marschak mechanism, which closely resembles how MAPs are elicited.
 
-Betrayal aversion has been shown to be an important determinant of trust (Bohnet and Zeckhauser, 2004).
+Betrayal aversion has been shown to be an important determinant of trust \citep{Bohnet2004}.
 We study whether the way betrayal aversion is identified (as a difference in Minimum Acceptable Probabilities, MAPs) is affected by beliefs about one’s prospects.
 
 In a within-subject design, we find that MAPs are lower the worse the prospects one faces.
 This is similar to the distributional dependence of valuations elicited using the Becker–DeGroot–Marschak mechanism.
 Our results suggest that distributional dependence should be accounted for when eliciting MAPs to isolate betrayal aversion.
+
+\noindent \textit{JEL: C72, C81, C91}
+
+\noindent  \textit{Keywords: Betrayal aversion, beliefs, reference, valuation}
 
 \end{abstract}
 \end{titlepage}
@@ -149,7 +159,7 @@ The mechanism resembles the Becker--DeGroot--Marschak mechanism \citep[in short,
 The MAP is elicited without first movers knowing how many second movers (devices) chose the favorable outcome at the second node.
 It is in first movers' best interest to state the true MAP at which they prefer sending money over not sending it.
 
-For expected utility maximisers, the MAP should be independent of their belief about the actual probability of fair sharing.
+For expected utility maximizers, the MAP should be independent of their belief about the actual probability of fair sharing.
 This need not be the case for non-expected utility maximizers.
 A recent paper shows theoretically that the elicitation procedure of MAPs used in most papers on betrayal aversion leaves the door open to potential confounds for betrayal aversion such as ``ambiguity attitudes, complexity, different beliefs, and dynamic optimization'' if players are not rational expected utility maximizers \citep{Li2020a}.
 Moreover, a couple of empirical papers which use more stringent identification procedures for betrayal aversion by controlling for first mover beliefs in the two games do not find betrayal aversion (\citeauthor{Fetchenhauer2012}, \citeyear{Fetchenhauer2012}, the second experiment in \citeauthor{Polipciuc2022inout}, \citeyear{Polipciuc2022inout}), or find it to play a role for trusting only when beliefs are far more optimistic than is generally the case \citep{Engelmann2021}.
@@ -294,6 +304,7 @@ This error did not affect decisions, but only which decision was selected for pa
 Participants were informed about the error after the experiment.
 }
 
+We present the instructions in Appendix \ref{section:appendixc}.
 
 
 \section{Hypothesis}\label{sec:hyp}
@@ -412,7 +423,7 @@ The Stata command is $pagetrend$.
 \begin{figure}[h!]
 	\centering
 	{\includegraphics[width=\linewidth]{MeanMAPs_nice.pdf}}
-	\caption{Mean MAPs by treatment and sequence}
+	\caption{Mean MAPs by treatment and decision sequence}
 	\label{fig:MeanMAPs}
 \end{figure}
 
@@ -420,7 +431,7 @@ Figure \ref{fig:MeanMAPs} shows that this ordering of MAPs holds for all six seq
 One sequence stands out: Good--Bad--Uniform.
 For each treatment, MAPs in this sequence are higher than in any other sequence.
 Even in the first decision, the MAP in \textbf{Good}--Bad--Uniform differs significantly from its counterpart in \textbf{Good}--Uniform--Bad ($p$-value = 0.003, Mann-Whitney test).
-Since the sequence of events and the information participants faced up to that point in the two treatments had been identical, this difference cannot be a treatment effect, nor an order effect.
+Since the sequence of events and the information participants faced up to that point in the two sequences had been identical, this difference cannot be a treatment effect, nor an order effect.
 
 In Table \ref{tab:reg} we present results of ordinary least square regressions of MAPs.
 %When referring to sequence order, we abbreviate treatment using initials e.g. we refer to sequence Good--Uniform--Bad as GUB.
@@ -652,20 +663,24 @@ We thus find a distributional dependence of risk attitudes as elicited using MAP
 This result implies that betrayal aversion should be identified after controlling for subjective beliefs.
 
 The result is consistent with several theories.
-A first type of such theories are theories of reference-dependent preferences which predict that individuals will be more risk loving when endowed with more risky options.
+A first type of such theories are theories of reference-dependent preferences which predict that individuals will be more risk loving when endowed with riskier options.
 Since our experiment was not meant to disentangle between competing theories, several of them could explain our results---for instance \cite{Koszegi2006,Koszegi2007} or \cite{Wenner2015}.
 These theories state that expectations (which we manipulated exogenously by changing the underlying distribution of lotteries) act as reference points.
 Modifying expectations modifies the gain-loss component of the utility function, such that higher expectations may make the same outcome less desirable.
 Alternatively, changing expectations could directly affect consumption utility: if one derives self-image utility from one's consumption, a change in expectations could change which goods are more desirable and thus, which ones offer a boost in self-image for the owner \citep{Strahilevitz1998,Marzilli2011}.
-With better options overall, the bar to determine which of them increase one's status will be placed higher.
+With better options overall, the bar to determine which of them increase one's status is placed higher.
 %Future research could examine which theory best explains the effect of distributional dependence on valuation in this type of context.
 A second theory which could explain the result is the range-frequency model \citep{Parducci1965,Parducci1971}.
-This theory explicitly considers that when evaluating the intensity of a stimulus, participants take into account both the range and the frequency of available stimuli. They divide the stimuli into categories according to each criterion and populate the categories with a roughly equal number of observations. By changing the frequency, as we do in the treatments, we change which components a participant assigns to a category. If only certain categories are deemed acceptable (e.g. risks worth taking), this can affect decisions in a way which aligns with the results.
+This theory explicitly considers that when evaluating the intensity of a stimulus, participants take into account both the range and the frequency of available stimuli. They divide the stimuli into categories according to each criterion and populate the categories with a roughly equal number of observations. By changing the frequency, as we do in the treatments, we change which components a participant assigns to a category. If only certain categories are deemed acceptable (i.e. risks worth taking), this can affect decisions in a way which aligns with the results.
 
 We chose the distributions for the treatments such that the overall chance of a high payoff was close to the probability of trustworthiness in the original studies on betrayal aversion.
 Further decisions about the Bad (Good) distribution were based on the condition that optimal MAPs be different in the three treatments using the parameters in the toy example of \cite{Li2020a} and additional assumptions detailed in Appendix \ref{subsec:RDU}.
 Many distributions fit this criterion and our choice at this point was arbitrary.
-Future evidence about how people conceptualize random versus strategic risk and ambiguity could inform experimental designs able to reconcile results from betrayal aversion studies with those on the flexible valuation of risky goods.
+Our results point to the need to account for beliefs in the control treatment used to identify betrayal aversion \citep[the Risky Dictator Game in][]{Bohnet2004}.
+Future evidence on how people think about random versus strategic risk and ambiguity will hopefully reconcile results from betrayal aversion studies with those on the flexible valuation of risky goods.
+
+
+%about how people conceptualize random versus strategic risk and ambiguity could inform experimental designs able to reconcile results from betrayal aversion studies with those on the flexible valuation of risky goods.
 
 
 %Advantages/contributions of our paper:
@@ -687,13 +702,13 @@ Future evidence about how people conceptualize random versus strategic risk and 
 \pagebreak
 
 \appendix
-\section{Theoretical Benchmarks}
+\section{Theoretical benchmarks}
 \label{section:appendixa}
 \setcounter{figure}{0}
 \setcounter{table}{0}
 \renewcommand{\thefigure}{A.\arabic{figure}}
 \renewcommand{\thetable}{A.\arabic{table}}
-\subsection{The Game}
+\subsection{The game}
 
 We analyze an extension of a simple one-player lottery choice.
 The decision maker (DM) decides whether to stay \emph{Out} and receive a safe outcome $s$ or to move \emph{In} and play a lottery which pays a high outcome $h$ with probability $p$ or a low outcome $l$ with probability $1-p$.
@@ -729,7 +744,7 @@ In the following we look at different benchmarks.
 In particular, we are interested in whether and how the optimal minimum acceptable probability MAP$^*$ depends on the distribution of $p$.
 
 
-\subsection{Expected Utility Theory}
+\subsection{Expected utility theory}
 \label{subsec:EUT}
 
 Assume the DM to have a utility function $U(\cdot)$. 
@@ -766,7 +781,7 @@ The optimal MAP$^*$ is independent of the distribution of $p$.
 Thus, an expected utility maximizer should not be influenced by it. 
 
 
-\subsection{Outcome Based Add-ons}
+\subsection{Outcome-based add-ons}
 
 The result of Section \ref{subsec:EUT} holds if the utility function of the DM is extended by other elements that are based on outcomes.
 For example, the DM might receive extra \mbox{(dis-)} utility from playing the lottery.
@@ -775,7 +790,7 @@ Such add-ons to the utility function lead to a different MAP$^*$, but $f(p)$ wou
 Hence, MAP$^*$ should still be independent of the distribution of $p$.  
 
 
-\subsection{Probability Weighting}
+\subsection{Probability weighting}
 
 Experimental evidence shows that humans have difficulties in handling probablities.
 In particular, they seem to overestimate small probabilities and underestimate large ones.\footnote{
@@ -798,7 +813,7 @@ This leaves us with the FOC:
 	U(s) - \left[w(\textit{MAP}) \cdot U(h) + w(1-\textit{MAP}) \cdot U(l) \right] = 0 
 \end{align}
 
-From the assumptions about the weighting function and $U(l)<U(s)<U(h)$, it follows that this equation has at least one solution (Theorem of Bolzano).
+From the assumptions about the weighting function and $U(l)<U(s)<U(h)$, it follows that this equation has at least one solution (Bolzano's Theorem).
 As in Section \ref{subsec:EUT}, all solutions are independent of the distribution of $p$.\footnote{
 We may get to a unique solution of equation (\ref{eq:FOCsimplified}) if we place additional requirements on the outcomes $U(\cdot)$ and/or on $w(p)$.
 Two possibilities are:
@@ -810,8 +825,7 @@ In case of multiple solutions, we assume the distribution of $p$ does not offer 
 }
 	
 
-
-\subsection{Rank Dependent Utility}
+\subsection{Rank-dependent utility}
 \label{subsec:RDU}
 %Let $p^*$ be the frequency of the high payoff, whose distribution varies between treatments.
 %Since we expect that attitudes towards complex risk might make participants state different MAPs in the three treatments, we adapt the toy example in \cite{Li2020a} and make the following assumptions:
@@ -842,6 +856,7 @@ where $P(\pounds4)$ is the probability of receiving the high payoff for a certai
 
 In this case, the MAPs which maximize participants' utility in the three treatments are: $MAP^{*}_G = 7 (RDU = 0.628)$, $MAP^{*}_U = 8 (RDU = 0.495)$, and $MAP^{*}_B = 9 (RDU = 0.439)$.
 
+\newpage
 \section{Range-frequency model: a numerical example}
 \label{section:appendixb}
 \setcounter{figure}{0}
@@ -896,5 +911,546 @@ Good & 8, 9, 10, 11, 12, 13, 14, 15\\
 If she thinks only categories OK and Good are acceptable and compromises between the two divisions of stimuli, she could report the following MAPs: MAP\textsubscript{G} = 10.5, MAP\textsubscript{U} = 8, MAP\textsubscript{B} = 5.5.
 As she gives more weight to the frequency criterion, choices get closer to one another.
 
+\newpage
+\section[Instructions]{Instructions\footnote{
+While the instructions look slightly differently in Qualtrics, we strove to depict the visual elements (the wheels, the distributions) as accurately as possible in this section.
+The horizontal lines mark the separation between pages.
+}}
+\label{section:appendixc}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\renewcommand{\thefigure}{C.\arabic{figure}}
+\renewcommand{\thetable}{C.\arabic{table}}
+
+\textbf{Statement of consent}\\
+\\
+\noindent In this study, you will be asked to make decisions.
+You will also be asked to answer comprehension questions, reasoning questions, and questions about yourself.
+Your data will remain anonymous in accordance with GDPR (the European Union's personal data protection law).\\
+\\
+\noindent This study follows the guidelines of the BEELab at Maastricht University.
+This means that all information you receive during the study is truthful.\\
+\\
+\noindent To continue, please select ``I agree to participate".
+\begin{itemize}
+\item I agree to participate
+\item I don't agree to participate
+\end{itemize}
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent Before you start, please switch off your phone/e-mail/music so you can focus on this study.
+Thank you!
+
+\noindent Please enter your Prolific ID: \rule{1cm}{0.15mm}
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent \textbf{Part 1}
+
+\noindent This part explains what the study is about and presents examples.
+We will test your understanding of the situation with some questions.
+
+\noindent To continue to Part 2, you have to answer these questions correctly.
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent Consider a wheel of fortune like the one below.\phantomsection\label{explanation}
+The wheel is equally likely to land on each sector.
+The pointer indicates the result: it's the sector which ends up at 12 o'clock when the wheel stops spinning.
+Give it a try!
+
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=0.4\linewidth]{SpinMe.pdf}}
+\end{figure}
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent In Part 2, you will see more such wheels. All wheels have \textbf{15 sectors} in total, which are either light blue or dark blue.
+The number in the middle is the \textbf{number of dark blue sectors} in a wheel.
+ 
+\noindent Below is an example with five wheels.
+
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{Explaining_MAP.pdf}}
+\end{figure}
+
+\noindent \textbf{One} of the wheels will be randomly selected. Each wheel is \textbf{equally likely} to be selected. If the selected wheel is spun, it is {equally likely to land on each sector}.
+
+\noindent You will have the following options for your bonus:
+
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{Options.pdf}}
+\end{figure}
+
+\noindent Let us consider some examples. If the selected wheel has
+\begin{itemize}
+\item 15 dark blue sectors, if you \textbf{SPIN} it your bonus is £4.00 for sure.
+If you \textbf{DON'T SPIN} it, you are guaranteed to receive £2.00.
+\item 0 dark blue sectors, if you \textbf{DON'T SPIN} it you are guaranteed £2.00.
+If you \textbf{SPIN} it, your bonus is £1.00 for sure.
+\end{itemize}
+
+\noindent \textbf{Without knowing} which wheel has been selected, you will be asked which wheels you want to \textbf{SPIN} for your bonus, and which ones you \textbf{DON'T} want to \textbf{SPIN}.
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent You will be asked the following question:
+
+\begin{mdframed}[backgroundcolor=LightBlue, linecolor=white]
+\noindent \textit{Which wheels do you prefer to SPIN for your bonus?} \\
+\\
+\noindent \textit{I prefer to SPIN wheels which have at least \framebox[0.1\textwidth]{\rule{0pt}{15pt}} dark blue sectors.} \\
+\\
+\noindent \textit{If the randomly selected wheel has \textbf{fewer than … dark blue sectors}, I \textbf{DON’T SPIN} it.
+I receive £2.00.} \\
+\textit{If the randomly selected wheel has \textbf{… or more dark blue sectors}, I \textbf{SPIN} it.
+I receive £4.00 if the wheel lands on dark blue, and £1.00 if it lands on light blue.}
+\end{mdframed}
+
+\noindent You can practice by introducing integers between 0 and 15 in the box above.
+When you introduce a number, all wheels with fewer dark blue sectors than your answer will be grayed out, indicating that you prefer DON'T SPIN for those wheels.
+The wheels with the same number or more dark blue sectors than your answer will not be affected, indicating that you prefer SPIN if one of those wheels is selected.
+
+\noindent At the end of the study you will be told which wheel has been selected.
+Its number of dark blue sectors will be compared to your answer, and your bonus will be determined by the relevant option (SPIN or DON'T SPIN).\phantomsection\label{end}
+
+\noindent Your \textbf{input on this screen} is simply for you to practice and it \textbf{doesn't affect your bonus}.
+You \textbf{don't have to memorize} this explanation: a non-interactive version like the one linked below under ``View explanation" will be available whenever relevant.
+
+\noindent \textcolor{blue}{\underline{View explanation}}
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent The comprehension questions will start on the next screen.
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent \underline{Comprehension Question 1}
+
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{five_wheelsS1_15.pdf}}
+\end{figure}
+ 
+\noindent Consider the wheels above.
+Let's assume you stated that you want to SPIN wheels with at least 3 sectors for your bonus.
+For this reason, wheels with fewer than 3 sectors are grayed out.
+The wheel with 7 sectors has been randomly selected (the wheel with a black border).\\
+\\
+\noindent Please select \textbf{all that apply}.\\
+ \\
+\noindent \textcolor{blue}{\underline{View explanation}}\footnote{
+Upon clicking, a pdf document opened in a separate window.
+The document contained the text on page \pageref{explanation} (``Consider a wheel...'') up to page \pageref{end} (``... determined by the relevant option (SPIN or DON'T SPIN).'').
+}\\
+\begin{itemize}
+\item[$\square$] I DON'T SPIN the selected wheel.
+\item[$\square$] I SPIN the selected wheel.
+\item[$\square$] My bonus is £1.00.
+\item[$\square$] My bonus is £2.00.
+\item[$\square$] My bonus is £4.00 if the selected wheel lands on dark blue, £1.00 if it lands on light blue.
+\item[$\square$] My bonus is £1.00 if the selected wheel lands on dark blue, £2.00 if it lands on light blue.
+\end{itemize}
+
+\noindent \rule{\linewidth}{0.4pt}
+\newpage
+\noindent \underline{Comprehension Question 2}
+
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{five_wheelsS2_15.pdf}}
+\end{figure}
+ 
+\noindent Consider the wheels above.
+Let's assume you stated that you want to SPIN wheels with at least 8 sectors for your bonus.
+For this reason, wheels with fewer than 8 sectors are grayed out.
+The wheel with 7 sectors has been randomly selected (the wheel with a black border).\\
+\\
+\noindent Please select \textbf{all that apply}.\\
+ \\
+\noindent \textcolor{blue}{\underline{View explanation}}\footnote{
+Upon clicking, a pdf document opened in a separate window.
+The document contained the text on page \pageref{explanation} (``Consider a wheel...'') up to page \pageref{end} (``... determined by the relevant option (SPIN or DON'T SPIN).'').
+}\\
+\begin{itemize}
+\item[$\square$] I DON'T SPIN the selected wheel.
+\item[$\square$] I SPIN the selected wheel.
+\item[$\square$] My bonus is £1.00.
+\item[$\square$] My bonus is £2.00.
+\item[$\square$] My bonus is £4.00 if the selected wheel lands on dark blue, £1.00 if it lands on light blue.
+\item[$\square$] My bonus is £1.00 if the selected wheel lands on dark blue, £2.00 if it lands on light blue.
+\end{itemize}
+
+\noindent \rule{\linewidth}{0.4pt}
+\newpage
+\noindent \underline{Comprehension Question 3}\footnote{
+If participants answered all comprehension questions correctly, they would go to the next part.
+If not, they were given the chance to review their answers.
+Those who revised correctly would also go to the next part.
+The experiment ended for those who did not revise correctly.
+}
+ 
+\noindent Please select the correct statement from each of the following pairs.
+
+\begin{tasks}[style=itemize](2)
+\task Each wheel is \textbf{equally likely} to be selected.
+\task Some wheels are \textbf{more likely} to be selected than others.
+\task I \textbf{can} influence the chance that a particular wheel is selected.
+\task I \textbf{can't} influence the chance that a particular wheel is selected. 
+\task I get to spin the selected wheel \textbf{regardless of} whether it is in the grayed out area or not.
+\task I get to spin the selected wheel \textbf{only if} it's not in the grayed out area.
+\task If I get to spin the selected wheel, it is \textbf{equally likely} to land on each sector.
+\task If I get to spin the selected wheel, it is \textbf{more likely} to land on sectors which are initially around 12 o'clock. 
+\task My bonus is £4.00 if the selected wheel is in the \textbf{grayed out} area and the selected wheel lands on \textbf{light blue}.
+\task My bonus is £4.00 if the selected wheel is in the \textbf{non-grayed out} area and the selected wheel lands on \textbf{dark blue}.
+\end{tasks}
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent You have answered all questions in Part 1 correctly. \\
+You will now be directed to Part 2.
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent \textbf{Part 2}\footnote{
+The decisions on the next three screens were shown in randomized order.
+}
+
+\noindent In this part, you will be asked 
+\begin{itemize}
+\item How you want your bonus to be determined \textbf{in three different situations}.
+Choose your most preferred option from those available.
+There are no right or wrong answers to these questions.
+\item Reasoning questions and questions about yourself.
+\end{itemize}
+
+\noindent At the end of Part 2, \textbf{one of the three situations will be randomly selected}, and your bonus will be determined according to your answer in that situation.
+Each of the three situations is equally likely to be selected.
+
+\noindent \rule{\linewidth}{0.4pt}
+
+\newpage
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{Left_15.pdf}}
+\end{figure}
+
+\noindent Consider the wheels above.
+Which wheels do you prefer to SPIN for your bonus?\\
+{\small Please enter an integer between 0 and 15.} \\
+\\
+\noindent I prefer to SPIN wheels which have at least \framebox[0.1\textwidth]{\rule{0pt}{15pt}}\footnote{
+The box was dynamic: as participants typed a number, the wheels which were ineligible for being selected in case that number was the participant's decision were grayed out and the ellipses below were replaced with that number.
+This way, participants were informed about the implications of potential decisions.
+}
+dark blue sectors.\\
+\\
+\noindent If the randomly selected wheel has fewer than ... dark blue sectors, I DON'T SPIN it.
+My bonus is £2.00.
+
+\noindent If the randomly selected wheel has ... or more dark blue sectors, I SPIN it.
+My bonus is
+\begin{itemize}
+\item £1.00 if the selected wheel lands on light blue, and
+\item £4.00 if it lands on dark blue.
+\end{itemize}
+
+\noindent \rule{\linewidth}{0.4pt}
+
+\newpage
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{Uniform_15.pdf}}
+\end{figure}
+
+\noindent Consider the wheels above.
+Which wheels do you prefer to SPIN for your bonus?\\
+{\small Please enter an integer between 0 and 15.} \\
+\\
+\noindent I prefer to SPIN wheels which have at least \framebox[0.1\textwidth]{\rule{0pt}{15pt}} dark blue sectors.\\
+\\
+\noindent If the randomly selected wheel has fewer than ... dark blue sectors, I DON'T SPIN it.
+My bonus is £2.00.
+
+\noindent If the randomly selected wheel has ... or more dark blue sectors, I SPIN it.
+My bonus is
+\begin{itemize}
+\item £1.00 if the selected wheel lands on light blue, and
+\item £4.00 if it lands on dark blue.
+\end{itemize}
+
+\noindent \rule{\linewidth}{0.4pt}
+
+\newpage
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{Right_15.pdf}}
+\end{figure}
+
+\noindent Consider the wheels above.
+Which wheels do you prefer to SPIN for your bonus?\\
+{\small Please enter an integer between 0 and 15.} \\
+\\
+\noindent I prefer to SPIN wheels which have at least \framebox[0.1\textwidth]{\rule{0pt}{15pt}} dark blue sectors.\\
+\\
+\noindent If the randomly selected wheel has fewer than ... dark blue sectors, I DON'T SPIN it.
+My bonus is £2.00.
+
+\noindent If the randomly selected wheel has ... or more dark blue sectors, I SPIN it.
+My bonus is
+\begin{itemize}
+\item £1.00 if the selected wheel lands on light blue, and
+\item £4.00 if it lands on dark blue.
+\end{itemize}
+
+\noindent \rule{\linewidth}{0.4pt}
+
+\newpage
+The reasoning questions and the questions about yourself will start on the next screen.
+
+\smallskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{Ambiguous_15.pdf}}
+\end{figure}
+
+\noindent The scenario described below is \textbf{hypothetical}: your answer \textbf{doesn't influence your bonus}.
+\smallskip
+\noindent Imagine 32 wheels of fortune with 15 sectors each.
+Like before, their sectors are either light blue (worth £1.00) or dark blue (worth £4.00).
+However, the sectors' color is hidden, so you \textbf{don't know how many dark blue} or \textbf{light blue sectors} each wheel has.
+One of the 32 wheels will be selected at random: depending on your answer to the question below, you SPIN the wheel or you DON'T SPIN it.
+ 
+\noindent In this case, which wheels would you prefer to SPIN for your bonus?
+
+\noindent {\small Please enter an integer between 0 and 15.}
+
+\smallskip
+\noindent I prefer to SPIN wheels which have at least \framebox[0.1\textwidth]{\rule{0pt}{15pt}} dark blue sectors.
+
+\smallskip
+\noindent If the randomly selected wheel has fewer than ... dark blue sectors, I DON'T SPIN it.
+My bonus is £2.00.
+
+\noindent If the randomly selected wheel has ... or more dark blue sectors, I SPIN it.
+My bonus is
+\begin{itemize}
+\item £1.00 if the selected wheel lands on light blue, and
+\item £4.00 if it lands on dark blue.
+\end{itemize}
+
+\noindent \rule{\linewidth}{0.4pt}
+
+\newpage
+\noindent Please answer the following questions.\\
+\\
+\noindent Simon had 17 plants at home and all but 8 died.
+How many are left?\\
+\framebox[0.1\textwidth]{\rule{0pt}{15pt}}
+
+\noindent Claire's grandmother has three granddaughters.
+The first two are named April and May.
+What is the third granddaughter's name?\\
+\framebox[0.1\textwidth]{\rule{0pt}{15pt}}
+
+\noindent If you're running a race and you pass the person in second place, what place are you in? (type in the number of the place)\\
+\framebox[0.1\textwidth]{\rule{0pt}{15pt}}
+
+\noindent A scientist grows bacteria on a Petri dish.
+Every day, the area covered by bacteria doubles in size.
+If it takes 6 days for the entire dish to be covered, how long would it take for half of the dish to be covered?\\
+\framebox[0.1\textwidth]{\rule{0pt}{15pt}}
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent What subject did you study for your most recent degree? \textit{[drop-down menu]}\\
+\\
+\noindent How do you see yourself: are you generally a person who is fully prepared to take risks or do you try to avoid taking risks?
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{RiskAversion.pdf}}
+\end{figure}
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent Which of the following do you take into consideration when deciding whether to take part in a study?
+Please select all that apply.\footnote{
+One of the next two screens was shown at random to participants.
+}
+\begin{itemize}
+\item Total pay
+\item Pay per hour
+\item Other things, such as \\
+\framebox[\textwidth]{\rule{0pt}{15pt}}
+\end{itemize}
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent The next questions are about general facts that you may or may not know.
+Please give your best estimates.
+We also ask that you please not look up the answers; we are interested in people's estimates, whether or not they are accurate.\\
+\\
+Do you think that the \textbf{average daily temperature in June} in Amsterdam, the Netherlands, between 1971 and 2020 was higher or lower than 14°C?
+\begin{itemize}
+\item Higher
+\item Lower
+\end{itemize}
+\leavevmode \\
+\noindent What do you think was the \textbf{average daily temperature in June} in Amsterdam in this period?\\
+\framebox[0.1\textwidth]{\rule{0pt}{15pt}}°C\\
+\\
+\noindent Do you think that the number of \textbf{average daily hours of sunshine in June} in Amsterdam, the Netherlands, between 1971 and 2020 was higher or lower than 10?
+\begin{itemize}
+\item Higher
+\item Lower
+\end{itemize}
+\leavevmode \\
+\noindent What do you think was the number of \textbf{average daily hours of sunshine in June} in Amsterdam in this period?\\
+\framebox[0.1\textwidth]{\rule{0pt}{15pt}} hour(s) and \framebox[0.1\textwidth]{\rule{0pt}{15pt}} minute(s)
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent The next questions are about general facts that you may or may not know.
+Please give your best estimates.
+We also ask that you please not look up the answers; we are interested in people's estimates, whether or not they are accurate.\\
+\\
+Do you think that the \textbf{average daily temperature in June} in Amsterdam, the Netherlands, between 1971 and 2020 was higher or lower than 17°C?
+\begin{itemize}
+\item Higher
+\item Lower
+\end{itemize}
+\leavevmode \\
+\noindent What do you think was the \textbf{average daily temperature in June} in Amsterdam in this period?\\
+\framebox[0.1\textwidth]{\rule{0pt}{15pt}}°C\\
+\\
+\noindent Do you think that the number of \textbf{average daily hours of sunshine in June} in Amsterdam, the Netherlands, between 1971 and 2020 was higher or lower than 4?
+\begin{itemize}
+\item Higher
+\item Lower
+\end{itemize}
+\leavevmode \\
+\noindent What do you think was the number of \textbf{average daily hours of sunshine in June} in Amsterdam in this period?\\
+\framebox[0.1\textwidth]{\rule{0pt}{15pt}} hour(s) and \framebox[0.1\textwidth]{\rule{0pt}{15pt}} minute(s)
+
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent For the questions below, please be as honest and accurate as you can throughout.
+Try not to let your response to one statement influence your responses to other statements.
+There are no ``correct" or ``incorrect" answers.
+Answer according to your own feelings, rather than how you think ``most people" would answer.
+
+\begin{table}[htbp]
+\begin{tabular}
+   {@{}
+	l
+	*5c
+	@{}
+	}
+&\thead{I disagree\\a lot}&\thead{I disagree\\a little}&\thead{I neither\\agree nor\\disagree}&\thead{I agree a\\little}&\thead{I agree a\\lot}\\
+\thead[vl]{In uncertain times, I\\usually expect the best.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\thead[vl]{It's easy for me to relax.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\thead[vl]{If something can go wrong for\\me, it will.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\thead[vl]{I'm always optimistic about my\\future.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\thead[vl]{I enjoy my friends a lot.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\midrule
+\addlinespace
+&\thead{I disagree\\a lot}&\thead{I disagree\\a little}&\thead{I neither\\agree nor\\disagree}&\thead{I agree a\\little}&\thead{I agree a\\lot}\\
+\thead[vl]{It's important for me to keep busy.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\thead[vl]{I hardly ever expect things to go\\my way.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\thead[vl]{I don't get upset too easily.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\thead[vl]{I rarely count on good things\\happening to me.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\thead[vl]{Overall, I expect more good\\things to happen to me than bad.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\midrule
+\addlinespace
+&\thead{I disagree\\a lot}&\thead{I disagree\\a little}&\thead{I neither\\agree nor\\disagree}&\thead{I agree a\\little}&\thead{I agree a\\lot}\\
+\thead[vl]{I would like to explore strange\\places.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\thead[vl]{I like to do frightening things.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\thead[vl]{I like new and exciting\\experiences, even if I have to\\break the rules.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\thead[vl]{I prefer friends who are exciting\\and unpredictable.}	& $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ & $\ocircle$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\newpage
+\noindent On the next screen, you will be informed\footnote{
+Only one of the next two screens was shown to participants, depending on how their randomly chosen decision compared to the randomly selected wheel.
+The examples illustrate the two possible scenarios.
+}
+\begin{itemize}
+\item which of three situations has been selected, and
+\item which wheel from that situation has been selected.
+\end{itemize}
+  
+\bigskip  
+\noindent \rule{\linewidth}{0.4pt}    
+
+\noindent \textit{Situation 1: the selected wheel was eligible for spinning}\\
+\\
+\noindent The situation below has been randomly selected.
+In this situation, you stated that you prefer to spin the wheel if it has \textbf{at least 6 dark blue sectors}.
+The randomly selected wheel is the one surrounded by a black border.
+Since this wheel is not grayed out (as it has 6 or more dark blue sectors), you will SPIN it for your bonus.
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{Eligible.pdf}}
+\end{figure}
+
+\noindent \rule{\linewidth}{0.4pt}
+\newpage
+\noindent Spin the selected wheel to determine your bonus.
+If you wish, you can try it out a couple of times before the final spin, which is the one that counts.
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=0.4\linewidth]{FinalSpin.pdf}}
+\end{figure}
+
+\noindent \rule{\linewidth}{0.4pt}
+\newpage
+\noindent \textit{Situation 2: the selected wheel was not eligible for spinning}\\
+\\
+\noindent The situation below has been randomly selected.
+In this situation, you stated that you prefer to spin the wheel if it has \textbf{at least 6 dark blue sectors}.
+The randomly selected wheel is the one surrounded by a black border.
+Since this wheel is grayed out (as it has fewer than 6 dark blue sectors), you DON'T SPIN it.
+Your bonus is £2.00.
+
+\begin{figure}[h!]
+	\centering
+	{\includegraphics[width=\linewidth]{Ineligible.pdf}}
+\end{figure}
+		
+\bigskip
+\noindent \rule{\linewidth}{0.4pt}
+
+\noindent We thank you for your time spent taking this survey.
+Your response has been recorded.\\
+\noindent If you have any comments, please write them in the box below. \\
+\framebox[\textwidth]{\rule{0pt}{15pt}}\\
+\\
+If you would like to be informed about the earnings of all participants in this study, please select the option below.
+We will send you the earnings distribution via Prolific no later than a week after the last submission.
+\begin{itemize}
+\item[$\square$] I would like to be informed about the earnings distribution in this study.
+\end{itemize}
 
 \end{document}
