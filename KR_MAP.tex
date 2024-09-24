@@ -1,0 +1,129 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{setspace}
+\usepackage[centertags,reqno]{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics,subfigure}
+\usepackage[dvips]{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{appendix}
+\usepackage{natbib}
+\usepackage{pdflscape}
+\usepackage[showframe=false]{geometry}
+\usepackage{mdframed}
+\usepackage{eurosym}
+%\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{hyphenat}
+\usepackage{tikz}
+\newcommand{\mybox}[2]{{\color{#1}\fbox{\normalcolor#2}}}
+
+\usepackage{tabularx,calc}
+\usepackage{dcolumn}                    % Aligns tables on the decimal point
+\newcolumntype{d}[1]{D{.}{.}{#1}}       %       Aligns on dot
+\newcolumntype{.}{D{.}{.}{3.5}}         %       Somehow it works better
+\newcolumntype{C}{@{\extracolsep{.6cm}}c@{\extracolsep{0pt}}}
+\usepackage{threeparttable}
+\usepackage{siunitx,booktabs}
+\sisetup{
+    detect-all,
+    round-integer-to-decimal = true,
+    group-digits             = true,
+    group-minimum-digits     = 4,
+    group-separator          = {\,},
+    table-align-text-pre     = false,
+    table-align-text-post    = false,
+    input-signs              = + -,
+    input-symbols            = {*},
+    input-open-uncertainty   = ,
+    input-close-uncertainty  = ,
+    retain-explicit-plus
+}
+
+\begin{document}
+
+In this paper, we use an online experiment to study whether the distribution of risks that participants face influences their willingness to take risks.
+Participants can earn either a high or a low payoff by accepting a lottery, or a safe intermediary payoff by rejecting the lottery.
+We do not list possible lotteries in (increasing / decreasing) order of the probability of the high payoff (similar to a Holt and Laury task risk elicitation task) and ask participants for each lottery whether they prefer it over the safe payoff.
+Instead, we use a Becker--Degroot--Marschak mechanism and ask them for their minimum acceptable probability (MAP) of the lottery's high payoff for preferring the lottery over the safe payoff.
+
+When making their decision, participants see a graphical representation of a distribution over lotteries with two possible outcomes (high and low), but varying probabilities for each outcome.
+After they report their MAP, a lottery is drawn at random from the distribution.
+This means in some treatments it is more likely that a lottery with a high chance of a high payoff is drawn.
+We use three distributions over lotteries.
+The distributions are ordered in terms of the expected payoff over the entire distribution, as their name suggests: the Good, the Bad, and the Uniform (the Good $>$ the Uniform $>$ the Bad).
+
+We present lotteries via 32 wheels of fortune with 15 sectors each.
+Dark blue sectors symbolize the high payoff (\pounds4), light blue sectors---the low payoff (\pounds1).
+The sure payoff (the payoff participants receive if no wheel is spun) is \pounds2.
+In each treatment, participants see the wheels sorted in ascending order by the probability of the favorable outcome, with the 32 wheels equally distributed over 4 rows.
+
+\begin{figure}[h!]
+  \centering
+ {\includegraphics[width=\linewidth]{Fig1_Left_15.pdf}}
+  \caption{The Good distribution}
+  \label{fig:TheGood}
+\end{figure}
+
+Figure \ref{fig:TheGood} shows the distribution of lotteries for the Good treatment.
+The number in each wheel is the number of sectors yielding a high payoff (ranging from 0 to 15).
+The Uniform distribution has equal chances of occurrence for each of the possible wheels.
+The Bad distribution has an overall chance of a high payoff equal to 0.2895.
+The distribution in Good mirrors the one in Bad: its overall expected chance of a high payoff is one minus that in Bad (0.7105), it has the same variance and minus the skewness of the Bad distribution.
+Table \ref{tab:distr} presents the distributions.
+
+
+\begin{table}[htbp]
+\centering \caption{The treatments: the distribution of chances of a high payoff}\label{tab:distr}
+\begin{threeparttable}
+\begin{tabular}
+   {@{}
+	*5c
+	@{}
+	}
+\toprule
+	&	\multicolumn{3}{c}{\# of wheels}&\\
+	\cmidrule{2-4}
+\# of high payoff sectors 	&	{The Good}&{The Bad}&	{The Uniform}& {Probability of high payoff}\\
+\midrule
+0	    &	1&       8&	2& 0   \\
+1	    &	1&       4&	2& 0.07\\
+2	    &	1&       4&	2& 0.13\\
+3	    &	1&       3&	2& 0.20\\
+4	    &	1&       2&	2& 0.27\\
+5	    &	1&       1&	2& 0.33\\
+6	    &	1&       1&	2& 0.38\\
+7	    &	1&       1&	2& 0.47\\
+8	    &	1&       1&	2& 0.53\\
+9	    &	1&       1&	2& 0.60\\
+10	    & 1&       1&	2& 0.67\\
+11	    & 2&       1&	2& 0.73\\
+12	    &	3&       1&	2& 0.80\\
+13	    &	4&       1&	2& 0.87\\
+14	    &	4&       1&	2& 0.93\\
+15	    &	8&       1&	2& 1   \\
+\midrule
+Total \# of wheels	&	32&       32&	32&\\
+\bottomrule
+
+\end{tabular}
+\end{threeparttable}
+\end{table}
+
+Participants are told that one of the wheels will be drawn at random, with all wheels having an equal chance to be drawn.
+They are asked to state a \textit{minimum acceptable frequency}: the lowest number of dark blue sectors in the randomly drawn wheel such that they prefer to spin the wheel instead of receiving the sure payoff.\footnote{
+We decided to use frequencies instead of probabilities because there is evidence that participants have an easier time expressing choice this way \citep{Quercia2016}.}
+Specifically, they have to answer: ``Which wheels would you like to spin for your bonus?'' by inserting an integer between 0 and 15 in the blank space: ``I prefer to spin wheels which have at least \rule{1cm}{0.15mm} dark blue sectors.''\footnote{
+We chose the setup with wheels of fortune as we wanted to make the task easy to understand.
+Despite our approach being discrete, we will interpret the frequencies ($x$ out of 15) as minimum acceptable probabilities.
+}
+
+We use a within-subject design.
+One of the three decisions participants make (the three MAPs) is relevant for payment.
+
+\clearpage
+\pagebreak
+\bibliographystyle{apalike}
+\bibliography{MAPs}
+\end{document}
